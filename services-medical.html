@@ -15,71 +15,38 @@
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;color:var(--body);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased;}
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
-.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:72px;}
-.nav-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);text-decoration:none;display:flex;align-items:baseline;letter-spacing:-0.02em;}
-.nav-logo .tac{color:var(--navy);font-weight:900;}
-.nav-logo .fundi{color:var(--gold);font-weight:600;font-style:italic;}
-.nav-links{display:flex;align-items:center;gap:32px;}
-.nav-links a{font-size:14px;font-weight:500;color:var(--slate);text-decoration:none;transition:color 0.2s;}
-.nav-links a:hover{color:var(--navy);}
-.nav-links a.active{color:var(--navy);font-weight:600;}
-.nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:10px 22px;border-radius:var(--radius);font-size:13px!important;font-weight:600!important;}
-.nav-cta:hover{background:var(--navy2)!important;}
-.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px;}
-.hamburger span{display:block;width:22px;height:2px;background:var(--navy);transition:all 0.3s;}
-.mob-menu{display:none;position:fixed;top:72px;left:0;right:0;bottom:0;background:var(--white);z-index:99;padding:40px 6%;flex-direction:column;gap:28px;border-top:1px solid var(--border2);}
-.mob-menu.open{display:flex;}
-.mob-menu a{font-size:20px;font-weight:500;color:var(--navy);text-decoration:none;}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--radius);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer;border:none;transition:all 0.22s;}
-.btn-primary{background:var(--navy);color:var(--white);}
-.btn-primary:hover{background:var(--navy2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(13,34,64,0.22);}
-.btn-gold{background:var(--gold);color:var(--white);}
-.btn-gold:hover{background:var(--gold2);transform:translateY(-1px);}
-.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy);}
-.btn-outline:hover{background:var(--navy);color:var(--white);}
-.btn-outline-white{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.5);}
-.btn-outline-white:hover{background:rgba(255,255,255,0.1);}
+.btn-primary{background:var(--navy);color:var(--white);} .btn-primary:hover{background:var(--navy2);transform:translateY(-1px);}
+.btn-gold{background:var(--gold);color:var(--white);} .btn-gold:hover{background:var(--gold2);transform:translateY(-1px);}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy);} .btn-outline:hover{background:var(--navy);color:var(--white);}
+.btn-outline-white{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.5);} .btn-outline-white:hover{background:rgba(255,255,255,0.1);}
 .btn-sm{padding:10px 20px;font-size:13px;}
-.section{padding:96px 6%;}
-.section-sm{padding:64px 6%;}
-.container{max-width:1100px;margin:0 auto;}
-.container-sm{max-width:760px;margin:0 auto;}
+.section{padding:96px 6%;} .section-sm{padding:64px 6%;}
+.container{max-width:1100px;margin:0 auto;} .container-sm{max-width:760px;margin:0 auto;}
 .section-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
 .section-label::before{content:'';display:block;width:24px;height:1.5px;background:var(--gold);}
 .gold-rule{width:48px;height:3px;background:var(--gold);margin:20px 0;}
-
-/* MED HERO - slightly different treatment to differentiate from law page */
 .page-hero{background:linear-gradient(150deg,var(--navy) 0%,#0a1e35 60%,#0d2e2e 100%);padding:80px 6% 72px;position:relative;overflow:hidden;}
 .page-hero::before{content:'';position:absolute;top:-20%;right:-5%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(13,107,107,0.18) 0%,transparent 70%);pointer-events:none;}
 .breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:20px;}
 .breadcrumb a{color:rgba(255,255,255,0.45);text-decoration:none;}
-.breadcrumb a:hover{color:var(--gold2);}
 .breadcrumb span{color:rgba(255,255,255,0.3);}
-.page-hero h1{font-size:clamp(36px,4vw,52px);color:var(--white);line-height:1.15;margin-bottom:16px;letter-spacing:-0.02em;max-width:640px;}
+.page-hero h1{font-size:clamp(30px,4vw,52px);color:var(--white);line-height:1.15;margin-bottom:16px;letter-spacing:-0.02em;max-width:640px;}
 .page-hero h1 em{color:var(--gold2);font-style:normal;}
 .page-hero p{font-size:17px;color:rgba(255,255,255,0.7);max-width:540px;line-height:1.7;margin-bottom:32px;}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
-
-/* SPECIAL INFO SECTION */
-.special-band{background:var(--teal-light);border-bottom:3px solid var(--teal);padding:32px 6%;}
+.special-band{background:var(--teal-light);border-bottom:3px solid var(--teal);padding:28px 6%;}
 .special-band-inner{max-width:1100px;margin:0 auto;display:flex;align-items:flex-start;gap:20px;}
 .special-icon{width:44px;height:44px;background:var(--teal);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .special-icon svg{width:22px;height:22px;color:white;}
 .special-text strong{display:block;font-size:15px;font-weight:600;color:var(--teal);margin-bottom:4px;}
 .special-text span{font-size:14px;color:var(--body);}
-
-/* INTRO STATS */
 .intro-band{background:var(--light);border-bottom:1px solid var(--border2);padding:40px 6%;}
 .intro-band-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
 .intro-stat{text-align:center;padding:20px;}
 .intro-stat-num{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--navy);}
 .intro-stat-label{font-size:13px;color:var(--slate);margin-top:4px;line-height:1.5;}
-
-/* PROBLEM */
-.problem-band{background:var(--white);}
 .problem-band-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
-.problem-band h2{font-size:clamp(28px,3vw,40px);color:var(--navy);line-height:1.2;margin-bottom:20px;letter-spacing:-0.02em;}
-.problem-band p{font-size:16px;color:var(--slate);line-height:1.8;margin-bottom:14px;}
 .fear-card{background:var(--navy);border-radius:var(--radius-lg);padding:32px;color:white;}
 .fear-card h3{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold2);margin-bottom:20px;}
 .fear-item{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);}
@@ -87,8 +54,6 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
 .fear-num{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--gold);flex-shrink:0;line-height:1;margin-top:2px;}
 .fear-text{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.6;}
 .fear-text strong{color:white;display:block;margin-bottom:2px;}
-
-/* PACKAGES */
 .packages-section{background:var(--light);}
 .packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .pkg-card{background:var(--white);border:1px solid var(--border2);border-radius:var(--radius-lg);overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column;}
@@ -111,41 +76,57 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
 .pkg-list li{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--body);}
 .pkg-list li::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0;margin-top:1px;}
 .pkg-cta{margin-top:24px;}
-
-/* WHAT MAKES US DIFFERENT */
-.diff-section{background:var(--white);}
-.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
-.diff-item{padding:28px;border:1px solid var(--border2);border-radius:var(--radius-lg);background:var(--white);transition:all 0.2s;}
-.diff-item:hover{border-color:var(--gold);box-shadow:var(--shadow);}
-.diff-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold);opacity:0.5;line-height:1;margin-bottom:10px;}
-.diff-item h3{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px;}
-.diff-item p{font-size:14px;color:var(--slate);line-height:1.7;}
-
-/* PRACTICE TYPES */
 .practice-section{background:var(--light);}
 .practice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 .practice-card{background:var(--white);border:1px solid var(--border2);border-radius:var(--radius-lg);padding:28px;text-align:center;transition:all 0.2s;}
 .practice-card:hover{border-color:var(--navy);box-shadow:var(--shadow);}
-.practice-icon{font-size:32px;margin-bottom:12px;}
 .practice-card h3{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px;}
 .practice-card p{font-size:13px;color:var(--slate);line-height:1.6;}
-
-/* PROCESS */
+.diff-section{background:var(--white);}
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+.diff-item{padding:28px;border:1px solid var(--border2);border-radius:var(--radius-lg);transition:all 0.2s;}
+.diff-item:hover{border-color:var(--gold);box-shadow:var(--shadow);}
+.diff-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold);opacity:0.5;line-height:1;margin-bottom:10px;}
+.diff-item h3{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px;}
+.diff-item p{font-size:14px;color:var(--slate);line-height:1.7;}
 .process-section{background:var(--navy);}
-.process-steps{display:flex;flex-direction:column;gap:0;}
+.process-steps{display:flex;flex-direction:column;}
 .process-step{display:grid;grid-template-columns:80px 1fr;gap:32px;padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.08);align-items:start;}
 .process-step:last-child{border-bottom:none;}
 .process-num{font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:var(--gold);opacity:0.5;line-height:1;}
 .process-content h3{font-family:'DM Sans',sans-serif;font-size:17px;font-weight:600;color:white;margin-bottom:8px;}
 .process-content p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;}
-
-/* CTA BAND */
 .cta-band{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);padding:80px 6%;text-align:center;}
-.cta-band h2{font-size:clamp(28px,3vw,40px);color:white;margin-bottom:14px;letter-spacing:-0.02em;}
+.cta-band h2{font-size:clamp(26px,3vw,40px);color:white;margin-bottom:14px;letter-spacing:-0.02em;}
 .cta-band p{font-size:17px;color:rgba(255,255,255,0.7);margin-bottom:36px;}
 .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-
-/* FOOTER */
+/* ── UNIFIED MOBILE NAV ── */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:72px;position:relative;}
+.nav-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);text-decoration:none;display:flex;align-items:baseline;letter-spacing:-0.02em;}
+.nav-logo .tac{color:var(--navy);font-weight:900;}
+.nav-logo .fundi{color:var(--gold);font-weight:600;font-style:italic;}
+.nav-links{display:flex;align-items:center;gap:32px;}
+.nav-links a{font-size:14px;font-weight:500;color:var(--slate);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--navy);}
+.nav-links a.active{color:var(--navy);font-weight:600;}
+.nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:10px 22px;border-radius:var(--radius);font-size:13px!important;font-weight:600!important;transition:background 0.2s!important;}
+.nav-cta:hover{background:var(--navy2)!important;}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;z-index:200;flex-shrink:0;}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--navy);border-radius:2px;transition:all 0.3s ease;}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-toggle.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+@media(max-width:768px){
+  .nav-toggle{display:flex;}
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy);flex-direction:column;padding:12px 0 20px;gap:0;box-shadow:0 8px 32px rgba(0,0,0,0.2);border-top:1px solid rgba(255,255,255,0.08);z-index:99;}
+  .nav-links.open{display:flex;}
+  .nav-links a{padding:14px 24px;font-size:16px;color:rgba(255,255,255,0.8)!important;border-bottom:1px solid rgba(255,255,255,0.07);font-weight:500;}
+  .nav-links a:hover{color:white!important;background:rgba(255,255,255,0.06);}
+  .nav-links a.active{color:white!important;font-weight:600;}
+  .nav-links a:last-child{border-bottom:none;}
+  .nav-cta{margin:12px 24px 0;text-align:center;padding:13px 22px!important;border-radius:var(--radius);background:var(--gold)!important;color:#000!important;font-size:15px!important;display:block;}
+  .nav-cta:hover{background:var(--gold2)!important;}
+}
 footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;}
 .footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.1);}
 .footer-logo{font-family:'Playfair Display',serif;font-size:24px;color:white;margin-bottom:10px;}
@@ -158,378 +139,175 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
 .footer-col a:hover{color:var(--gold2);}
 .footer-bottom{max-width:1100px;margin:24px auto 0;display:flex;justify-content:space-between;align-items:center;font-size:13px;}
 .footer-bottom a{color:rgba(255,255,255,0.4);text-decoration:none;}
-.cross-link{display:inline-flex;align-items:center;gap:8px;background:rgba(184,134,11,0.12);border:1px solid rgba(184,134,11,0.25);border-radius:var(--radius-lg);padding:20px 24px;text-decoration:none;transition:all 0.2s;}
-.cross-link:hover{background:rgba(184,134,11,0.2);border-color:var(--gold);}
-.cross-link-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);margin-bottom:4px;}
-.cross-link-title{font-size:16px;font-weight:600;color:var(--navy);}
-@media(max-width:900px){.problem-band-inner,.packages-grid,.diff-grid,.practice-grid,.intro-band-inner{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:640px){.nav-links{display:none;}.hamburger{display:flex;}.section{padding:64px 5%;}.footer-grid{grid-template-columns:1fr;}}
+@media(max-width:900px){
+  .footer-grid{grid-template-columns:1fr 1fr!important;gap:32px!important;}
+  .packages-grid,.included-grid,.profile-grid,.diff-grid,.practice-grid,.intro-band-inner,.problem-band-inner,.process-section>div,.contact-grid,.assessment-inner,.form-row{grid-template-columns:1fr!important;}
+}
+@media(max-width:640px){
+  .section{padding:56px 5%!important;} .section-sm{padding:40px 5%!important;}
+  .page-hero{padding:56px 5% 48px!important;} .cta-band{padding:56px 5%!important;}
+  .footer-grid{grid-template-columns:1fr!important;} .footer-bottom{flex-direction:column;gap:12px;text-align:center;}
+  .hero-btns,.cta-btns,.page-hero-btns{flex-direction:column;align-items:stretch!important;}
+  .hero-btns a,.cta-btns a,.page-hero-btns a{text-align:center;justify-content:center;}
+  .pkg-header,.pkg-body,.fear-card,.included-item{padding:20px!important;}
+  .process-step{grid-template-columns:60px 1fr!important;gap:16px!important;} .process-num{font-size:36px!important;}
+  .faq-tab{padding:9px 10px!important;font-size:11px!important;}
+  .intro-band-inner{grid-template-columns:1fr 1fr!important;}
+}
+@media(max-width:380px){.nav-logo{font-size:18px;}}
 </style>
 </head>
 <body>
 
-<nav class="nav">
+<nav class="nav" id="mainNav">
   <a href="index.html" class="nav-logo"><span class="tac">TAC</span><span class="fundi">Fundi</span></a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="services-law.html">Law Firms</a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html" >Home</a>
+    <a href="services-law.html" >Law Firms</a>
     <a href="services-medical.html" class="active">Medical Practices</a>
-    <a href="faq-contact.html">Contact</a>
+    <a href="faq-contact.html" >Contact</a>
     <a href="faq-contact.html#assessment" class="nav-cta">Free Assessment</a>
   </div>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" onclick="toggleNav()">
     <span></span><span></span><span></span>
   </button>
 </nav>
-<div class="mob-menu" id="mobMenu">
-  <a href="index.html">Home</a>
-  <a href="services-law.html">For Law Firms</a>
-  <a href="services-medical.html">For Medical Practices</a>
-  <a href="faq-contact.html">FAQ & Contact</a>
-  <a href="faq-contact.html#assessment" class="btn btn-primary btn-sm" style="width:fit-content">Free Assessment →</a>
-</div>
-
-<!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a>
-      <span>›</span>
-      <span style="color:rgba(255,255,255,0.65)">For Medical Practices</span>
-    </div>
-        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.35);border-radius:100px;padding:6px 14px;margin-bottom:20px;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-          <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#4ade80;">Registered — Info Regulator No. 2026-003992</span>
-        </div>
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,0.65)">For Medical Practices</span></div>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.35);border-radius:100px;padding:6px 14px;margin-bottom:20px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#4ade80;">Registered — Info Regulator No. 2026-003992</span></div>
     <h1>Patient Privacy, <em>Professionally Protected</em></h1>
-    <p>Patient records are classified as special personal information under POPIA — the highest protection category. TACFundi helps SA medical practices achieve and maintain full compliance without adding to your team's workload.</p>
-    <div class="hero-btns">
-      <a href="faq-contact.html#assessment" class="btn btn-gold">Book Free Assessment →</a>
-      <a href="#packages" class="btn btn-outline-white">View Packages</a>
-    </div>
+    <p>Patient records are classified as special personal information under POPIA — the highest protection category. TACFundi helps SA medical practices achieve and maintain full compliance.</p>
+    <div class="hero-btns"><a href="faq-contact.html#assessment" class="btn btn-gold">Book Free Assessment →</a><a href="#packages" class="btn btn-outline-white">View Packages</a></div>
   </div>
 </section>
-
-<!-- SPECIAL INFORMATION BAND -->
 <div class="special-band">
   <div class="special-band-inner">
-    <div class="special-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-    </div>
-    <div class="special-text">
-      <strong>Important: Medical data carries the highest POPIA obligations</strong>
-      <span>Health information is listed as "special personal information" under Section 26 of POPIA — meaning stricter requirements, stricter enforcement, and higher penalties apply to medical practices than to most other businesses.</span>
-    </div>
+    <div class="special-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+    <div class="special-text"><strong>Important: Medical data carries the highest POPIA obligations</strong><span>Health information is listed as "special personal information" under Section 26 of POPIA — meaning stricter requirements, stricter enforcement, and higher penalties apply to medical practices than to most other businesses.</span></div>
   </div>
 </div>
-
-<!-- INTRO STATS -->
-<div class="intro-band">
-  <div class="intro-band-inner">
-    <div class="intro-stat"><div class="intro-stat-num">Special</div><div class="intro-stat-label">Health data classified under POPIA's highest protection category</div></div>
-    <div class="intro-stat"><div class="intro-stat-num">R10M</div><div class="intro-stat-label">Maximum fine per POPIA violation for health data breaches</div></div>
-    <div class="intro-stat"><div class="intro-stat-num">HPCSA</div><div class="intro-stat-label">Professional body requires patient data confidentiality — POPIA formalises it in law</div></div>
-    <div class="intro-stat"><div class="intro-stat-num">72hrs</div><div class="intro-stat-label">To notify the Information Regulator after a patient data breach</div></div>
-  </div>
-</div>
-
-<!-- PROBLEM -->
-<section class="section problem-band">
+<div class="intro-band"><div class="intro-band-inner">
+  <div class="intro-stat"><div class="intro-stat-num">Special</div><div class="intro-stat-label">Health data classified under POPIA's highest protection category</div></div>
+  <div class="intro-stat"><div class="intro-stat-num">R10M</div><div class="intro-stat-label">Maximum fine per POPIA violation for health data breaches</div></div>
+  <div class="intro-stat"><div class="intro-stat-num">HPCSA</div><div class="intro-stat-label">Professional body requires patient data confidentiality — POPIA formalises it in law</div></div>
+  <div class="intro-stat"><div class="intro-stat-num">72hrs</div><div class="intro-stat-label">To notify the Information Regulator after a patient data breach</div></div>
+</div></div>
+<section class="section" style="background:var(--white);">
   <div class="container">
     <div class="problem-band-inner">
       <div>
         <div class="section-label">The Healthcare Data Challenge</div>
-        <h2>Your patients trust you with their most sensitive information.</h2>
+        <h2 style="font-size:clamp(26px,3vw,40px);color:var(--navy);line-height:1.2;margin-bottom:20px;letter-spacing:-0.02em;">Your patients trust you with their most sensitive information.</h2>
         <div class="gold-rule"></div>
-        <p>Every patient file you hold contains medical histories, diagnosis records, ID numbers, financial details, and sometimes deeply personal information about their lives. Under POPIA, you are legally required to protect all of it — with documented systems and a registered Information Officer.</p>
-        <p>Most medical practices already take patient confidentiality seriously. But the POPIA obligation goes further: it requires formal data processing documentation, staff training records, and a breach response plan — systems that most practices simply haven't had the time to implement.</p>
-        <p>TACFundi handles the entire compliance implementation for you. No disruption to your practice. No technical jargon. No need to become a cybersecurity expert.</p>
-        <div style="margin-top:32px;">
-          <a href="faq-contact.html#assessment" class="btn btn-primary">Get Your Free Practice Assessment →</a>
-        </div>
+        <p style="font-size:16px;color:var(--slate);line-height:1.8;margin-bottom:14px;">Every patient file you hold contains medical histories, diagnosis records, ID numbers, financial details, and sometimes deeply personal information about their lives. Under POPIA, you are legally required to protect all of it.</p>
+        <p style="font-size:16px;color:var(--slate);line-height:1.8;margin-bottom:14px;">Most medical practices already take patient confidentiality seriously. But the POPIA obligation goes further: it requires formal data processing documentation, staff training records, and a breach response plan.</p>
+        <p style="font-size:16px;color:var(--slate);line-height:1.8;margin-bottom:32px;">TACFundi handles the entire compliance implementation for you. No disruption to your practice. No technical jargon. No need to become a cybersecurity expert.</p>
+        <a href="faq-contact.html#assessment" class="btn btn-primary">Get Your Free Practice Assessment →</a>
       </div>
       <div class="fear-card">
         <h3>What we hear from medical practices</h3>
-        <div class="fear-item">
-          <div class="fear-num">1</div>
-          <div class="fear-text"><strong>"We're running a practice, not an IT department"</strong>Exactly. That's why TACFundi handles everything so you and your staff don't have to.</div>
-        </div>
-        <div class="fear-item">
-          <div class="fear-num">2</div>
-          <div class="fear-text"><strong>"I'm worried about ransomware locking our booking system"</strong>Healthcare systems are the most targeted sector. We set up the specific protections medical practices need.</div>
-        </div>
-        <div class="fear-item">
-          <div class="fear-num">3</div>
-          <div class="fear-text"><strong>"My receptionist clicked something she shouldn't have"</strong>Most breaches start exactly this way. Our staff training is specifically designed for non-technical admin staff.</div>
-        </div>
-        <div class="fear-item">
-          <div class="fear-num">4</div>
-          <div class="fear-text"><strong>"I don't know who has access to patient records"</strong>A 30-minute access audit reveals this immediately. It's one of the first things we do.</div>
-        </div>
+        <div class="fear-item"><div class="fear-num">1</div><div class="fear-text"><strong>"We're running a practice, not an IT department"</strong>Exactly. That's why TACFundi handles everything so you and your staff don't have to.</div></div>
+        <div class="fear-item"><div class="fear-num">2</div><div class="fear-text"><strong>"I'm worried about ransomware locking our booking system"</strong>Healthcare systems are the most targeted sector. We set up the specific protections medical practices need.</div></div>
+        <div class="fear-item"><div class="fear-num">3</div><div class="fear-text"><strong>"My receptionist clicked something she shouldn't have"</strong>Most breaches start exactly this way. Our staff training is specifically designed for non-technical admin staff.</div></div>
+        <div class="fear-item"><div class="fear-num">4</div><div class="fear-text"><strong>"I don't know who has access to patient records"</strong>A 30-minute access audit reveals this immediately. It's one of the first things we do.</div></div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- PACKAGES -->
 <section class="section packages-section" id="packages">
   <div class="container">
-    <div style="text-align:center;margin-bottom:48px;">
-      <div class="section-label" style="justify-content:center;">Service Packages</div>
-      <h2 style="font-size:clamp(28px,3vw,40px);color:var(--navy);letter-spacing:-0.02em;margin-bottom:12px;">Designed for the way practices work</h2>
-      <p style="font-size:16px;color:var(--slate);max-width:520px;margin:0 auto;">Priced for practice budgets. Scoped for practice realities. No IT knowledge required.</p>
-    </div>
+    <div style="text-align:center;margin-bottom:48px;"><div class="section-label" style="justify-content:center;">Service Packages</div><h2 style="font-size:clamp(26px,3vw,40px);color:var(--navy);letter-spacing:-0.02em;margin-bottom:12px;">Designed for the way practices work</h2><p style="font-size:16px;color:var(--slate);max-width:520px;margin:0 auto;">Priced for practice budgets. Scoped for practice realities. No IT knowledge required.</p></div>
     <div class="packages-grid">
-
-      <div class="pkg-card">
-        <div class="pkg-header">
-          <div class="pkg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/><path d="M9 14l2 2 4-4"/></svg></div>
-          <div class="pkg-name">Once-off</div>
-          <div class="pkg-title">Practice POPIA Audit</div>
-          <div class="pkg-type">Ideal first step for any medical practice</div>
-        </div>
-        <div class="pkg-price">
-          <span class="amount">R999</span><span class="period"> – R3,000</span>
-          <div class="note">Price depends on practice size. Fixed quote provided after free assessment.</div>
-        </div>
-        <div class="pkg-body">
-          <p class="pkg-desc">A thorough audit of your patient data processes against POPIA's special personal information requirements — documented clearly for your records.</p>
-          <ul class="pkg-list">
-            <li>Patient data flow mapping and documentation</li>
-            <li>Gap analysis against POPIA healthcare requirements</li>
-            <li>Information Officer registration support</li>
-            <li>Practice management software access review</li>
-            <li>Written compliance report in plain language</li>
-            <li>Priority action list for your practice manager</li>
-          </ul>
-          <div class="pkg-cta">
-            <a href="faq-contact.html#assessment" class="btn btn-outline" style="width:100%;justify-content:center;">Book This Service →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="pkg-card featured">
-        <div class="pkg-featured-badge">Most Popular</div>
-        <div class="pkg-header" style="padding-top:40px;">
-          <div class="pkg-icon" style="background:var(--navy);"><svg viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <div class="pkg-name">Monthly Retainer</div>
-          <div class="pkg-title">The Fundi Retainer</div>
-          <div class="pkg-type">Ongoing compliance & protection</div>
-        </div>
-        <div class="pkg-price" style="background:var(--gold-light);">
-          <span class="amount" style="color:var(--gold);">R599</span><span class="period"> /month</span>
-          <div class="note">Cancel anytime. No long-term contracts.</div>
-        </div>
-        <div class="pkg-body">
-          <p class="pkg-desc">Your practice's dedicated data protection partner — at a cost less than a single consultation fee.</p>
-          <ul class="pkg-list">
-            <li>Monthly patient data security health check</li>
-            <li>POPIA compliance monitoring & updates</li>
-            <li>Staff phishing awareness (quarterly)</li>
-            <li>Breach notification process management</li>
-            <li>Priority WhatsApp support line</li>
-            <li>Monthly compliance report for your records</li>
-            <li>Annual POPIA compliance certificate</li>
-          </ul>
-          <div class="pkg-cta">
-            <a href="faq-contact.html#assessment" class="btn btn-gold" style="width:100%;justify-content:center;">Start With Free Assessment →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="pkg-card">
-        <div class="pkg-header">
-          <div class="pkg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          <div class="pkg-name">Once-off or Per Person</div>
-          <div class="pkg-title">Staff Privacy Training</div>
-          <div class="pkg-type">For receptionists, nurses & admin staff</div>
-        </div>
-        <div class="pkg-price">
-          <span class="amount">R499</span><span class="period"> /person</span>
-          <div class="note">Group rate: R1,997 for up to 6 staff. Recording provided for future new hires.</div>
-        </div>
-        <div class="pkg-body">
-          <p class="pkg-desc">Practical training written specifically for medical practice staff — not generic IT awareness content but real-world scenarios from healthcare settings.</p>
-          <ul class="pkg-list">
-            <li>Patient data obligations under POPIA explained</li>
-            <li>What your receptionist must and must not share</li>
-            <li>Recognising phishing emails and suspicious calls</li>
-            <li>What to do if you suspect a breach</li>
-            <li>Completion certificate per staff member</li>
-            <li>Recording for future new staff inductions</li>
-          </ul>
-          <div class="pkg-cta">
-            <a href="faq-contact.html#assessment" class="btn btn-outline" style="width:100%;justify-content:center;">Book Training →</a>
-          </div>
-        </div>
-      </div>
-
+      <div class="pkg-card"><div class="pkg-header"><div class="pkg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/><path d="M9 14l2 2 4-4"/></svg></div><div class="pkg-name">Once-off</div><div class="pkg-title">Practice POPIA Audit</div><div class="pkg-type">Ideal first step for any medical practice</div></div><div class="pkg-price"><span class="amount">R999</span><span class="period"> – R3,000</span><div class="note">Price depends on practice size. Fixed quote after free assessment.</div></div><div class="pkg-body"><p class="pkg-desc">A thorough audit of your patient data processes against POPIA's special personal information requirements.</p><ul class="pkg-list"><li>Patient data flow mapping and documentation</li><li>Gap analysis against POPIA healthcare requirements</li><li>Information Officer registration support</li><li>Practice management software access review</li><li>Written compliance report in plain language</li><li>Priority action list for your practice manager</li></ul><div class="pkg-cta"><a href="faq-contact.html#assessment" class="btn btn-outline" style="width:100%;justify-content:center;">Book This Service →</a></div></div></div>
+      <div class="pkg-card featured"><div class="pkg-featured-badge">Most Popular</div><div class="pkg-header" style="padding-top:40px;"><div class="pkg-icon" style="background:var(--navy);"><svg viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="pkg-name">Monthly Retainer</div><div class="pkg-title">The Fundi Retainer</div><div class="pkg-type">Ongoing compliance & protection</div></div><div class="pkg-price" style="background:var(--gold-light);"><span class="amount" style="color:var(--gold);">R599</span><span class="period"> /month</span><div class="note">Cancel anytime. No long-term contracts.</div></div><div class="pkg-body"><p class="pkg-desc">Your practice's dedicated data protection partner — at a cost less than a single consultation fee.</p><ul class="pkg-list"><li>Monthly patient data security health check</li><li>POPIA compliance monitoring & updates</li><li>Staff phishing awareness (quarterly)</li><li>Breach notification process management</li><li>Priority WhatsApp support line</li><li>Monthly compliance report for your records</li><li>Annual POPIA compliance certificate</li></ul><div class="pkg-cta"><a href="faq-contact.html#assessment" class="btn btn-gold" style="width:100%;justify-content:center;">Start With Free Assessment →</a></div></div></div>
+      <div class="pkg-card"><div class="pkg-header"><div class="pkg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="pkg-name">Once-off or Per Person</div><div class="pkg-title">Staff Privacy Training</div><div class="pkg-type">For receptionists, nurses & admin staff</div></div><div class="pkg-price"><span class="amount">R499</span><span class="period"> /person</span><div class="note">Group rate: R1,997 for up to 6 staff.</div></div><div class="pkg-body"><p class="pkg-desc">Practical training written specifically for medical practice staff — real-world scenarios from healthcare settings.</p><ul class="pkg-list"><li>Patient data obligations under POPIA explained</li><li>What your receptionist must and must not share</li><li>Recognising phishing emails and suspicious calls</li><li>What to do if you suspect a breach</li><li>Completion certificate per staff member</li><li>Recording for future new staff inductions</li></ul><div class="pkg-cta"><a href="faq-contact.html#assessment" class="btn btn-outline" style="width:100%;justify-content:center;">Book Training →</a></div></div></div>
     </div>
   </div>
 </section>
-
-<!-- PRACTICE TYPES -->
 <section class="section practice-section">
   <div class="container">
-    <div style="text-align:center;margin-bottom:40px;">
-      <div class="section-label" style="justify-content:center;">Who We Serve</div>
-      <h2 style="font-size:clamp(28px,3vw,40px);color:var(--navy);letter-spacing:-0.02em;">Built for every type of SA medical practice</h2>
-    </div>
+    <div style="text-align:center;margin-bottom:40px;"><div class="section-label" style="justify-content:center;">Who We Serve</div><h2 style="font-size:clamp(26px,3vw,40px);color:var(--navy);letter-spacing:-0.02em;">Built for every type of SA medical practice</h2></div>
     <div class="practice-grid">
-      <div class="practice-card">
-        <div class="practice-icon"></div>
-        <h3>General Practitioners</h3>
-        <p>Solo and group GP practices with patient files, repeat prescriptions, and referral correspondence requiring full POPIA compliance.</p>
-      </div>
-      <div class="practice-card">
-        <div class="practice-icon"></div>
-        <h3>Specialist Practices</h3>
-        <p>Cardiologists, oncologists, orthopaedic surgeons, and other specialists handling highly sensitive diagnostic and treatment records.</p>
-      </div>
-      <div class="practice-card">
-        <div class="practice-icon"></div>
-        <h3>Dental Practices</h3>
-        <p>Dental practices managing patient records, X-rays, and treatment histories under POPIA's special personal information category.</p>
-      </div>
-      <div class="practice-card">
-        <div class="practice-icon"></div>
-        <h3>Mental Health Practices</h3>
-        <p>Psychologists and psychiatrists whose patient records carry the highest sensitivity — requiring the most rigorous data protection standards.</p>
-      </div>
-      <div class="practice-card">
-        <div class="practice-icon"></div>
-        <h3>Allied Health Practices</h3>
-        <p>Physiotherapists, optometrists, audiologists and other allied health professionals with patient data obligations under POPIA.</p>
-      </div>
-      <div class="practice-card">
-        <div class="practice-icon"></div>
-        <h3>Private Clinics & Day Hospitals</h3>
-        <p>Larger private clinical settings with multiple departments, complex data flows, and staff across multiple access levels.</p>
-      </div>
+      <div class="practice-card"><h3>General Practitioners</h3><p>Solo and group GP practices with patient files, repeat prescriptions, and referral correspondence requiring full POPIA compliance.</p></div>
+      <div class="practice-card"><h3>Specialist Practices</h3><p>Cardiologists, oncologists, orthopaedic surgeons, and other specialists handling highly sensitive diagnostic and treatment records.</p></div>
+      <div class="practice-card"><h3>Dental Practices</h3><p>Dental practices managing patient records, X-rays, and treatment histories under POPIA's special personal information category.</p></div>
+      <div class="practice-card"><h3>Mental Health Practices</h3><p>Psychologists and psychiatrists whose patient records carry the highest sensitivity — requiring the most rigorous data protection standards.</p></div>
+      <div class="practice-card"><h3>Allied Health Practices</h3><p>Physiotherapists, optometrists, audiologists and other allied health professionals with patient data obligations under POPIA.</p></div>
+      <div class="practice-card"><h3>Private Clinics & Day Hospitals</h3><p>Larger private clinical settings with multiple departments, complex data flows, and staff across multiple access levels.</p></div>
     </div>
   </div>
 </section>
-
-<!-- WHAT MAKES US DIFFERENT -->
 <section class="section diff-section">
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
-      <div>
-        <div class="section-label">Why TACFundi</div>
-        <h2 style="font-size:clamp(28px,3vw,38px);color:var(--navy);letter-spacing:-0.02em;margin-bottom:20px;">We understand medical practice, not just cybersecurity</h2>
-        <div class="gold-rule"></div>
-        <p style="font-size:16px;color:var(--slate);line-height:1.8;margin-bottom:20px;">Most IT companies apply a generic compliance template to every client. TACFundi works exclusively with law firms and medical practices — which means we understand the specific data flows, the regulatory language, and the real-world pressures of running a South African medical practice.</p>
-        <p style="font-size:16px;color:var(--slate);line-height:1.8;">We don't send a junior consultant with a checklist. We send a specialist who has worked with practices like yours, speaks the language of healthcare compliance, and delivers solutions that work within your existing systems.</p>
-        <div style="margin-top:32px;">
-          <a href="faq-contact.html#assessment" class="btn btn-primary">Book Free Assessment →</a>
-        </div>
-      </div>
+      <div><div class="section-label">Why TACFundi</div><h2 style="font-size:clamp(26px,3vw,38px);color:var(--navy);letter-spacing:-0.02em;margin-bottom:20px;">We understand medical practice, not just cybersecurity</h2><div class="gold-rule"></div><p style="font-size:16px;color:var(--slate);line-height:1.8;margin-bottom:20px;">Most IT companies apply a generic compliance template to every client. TACFundi works exclusively with law firms and medical practices — which means we understand the specific data flows, the regulatory language, and the real-world pressures of running a South African medical practice.</p><a href="faq-contact.html#assessment" class="btn btn-primary">Book Free Assessment →</a></div>
       <div class="diff-grid">
-        <div class="diff-item">
-          <div class="diff-num">01</div>
-          <h3>Healthcare-specific expertise</h3>
-          <p>We understand the difference between general personal information and special personal information under POPIA — and what it means for your practice specifically.</p>
-        </div>
-        <div class="diff-item">
-          <div class="diff-num">02</div>
-          <h3>Plain language always</h3>
-          <p>We explain everything the way a good doctor explains a diagnosis — clearly, completely, and without unnecessary complexity.</p>
-        </div>
-        <div class="diff-item">
-          <div class="diff-num">03</div>
-          <h3>Minimal practice disruption</h3>
-          <p>We work around your schedule. Most of what we need can be done remotely and asynchronously — no IT person sitting in your waiting room.</p>
-        </div>
-        <div class="diff-item">
-          <div class="diff-num">04</div>
-          <h3>Fixed, transparent pricing</h3>
-          <p>You know exactly what you'll pay before we begin. No hourly billing surprises, no scope creep, no hidden costs.</p>
-        </div>
+        <div class="diff-item"><div class="diff-num">01</div><h3>Healthcare-specific expertise</h3><p>We understand the difference between general and special personal information under POPIA — and what it means for your practice.</p></div>
+        <div class="diff-item"><div class="diff-num">02</div><h3>Plain language always</h3><p>We explain everything the way a good doctor explains a diagnosis — clearly, completely, without unnecessary complexity.</p></div>
+        <div class="diff-item"><div class="diff-num">03</div><h3>Minimal practice disruption</h3><p>Most of what we need can be done remotely and asynchronously — no IT person sitting in your waiting room.</p></div>
+        <div class="diff-item"><div class="diff-num">04</div><h3>Fixed, transparent pricing</h3><p>You know exactly what you'll pay before we begin. No hourly billing surprises, no scope creep, no hidden costs.</p></div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- PROCESS -->
 <section class="section process-section">
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
-      <div>
-        <div class="section-label" style="color:var(--gold2);">Our Process</div>
-        <h2 style="font-size:clamp(28px,3vw,40px);color:white;margin-bottom:12px;letter-spacing:-0.02em;">Getting your practice compliant — step by step</h2>
-        <p style="font-size:16px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:32px;">We follow a clear, structured process that minimises disruption and delivers a fully documented compliance outcome.</p>
-        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px;">
-          <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold2);margin-bottom:10px;">Typical timeline</div>
-          <div style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.8;">Free assessment: same week<br>Proposal delivered: within 48 hours<br>Initial audit completed: 5–10 business days<br>Ongoing retainer: monthly from there</div>
-        </div>
-      </div>
+      <div><div class="section-label" style="color:var(--gold2);">Our Process</div><h2 style="font-size:clamp(26px,3vw,40px);color:white;margin-bottom:12px;letter-spacing:-0.02em;">Getting your practice compliant — step by step</h2><p style="font-size:16px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:32px;">We follow a clear, structured process that minimises disruption and delivers a fully documented compliance outcome.</p><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:28px;"><div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold2);margin-bottom:10px;">Typical timeline</div><div style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.8;">Free assessment: same week<br>Proposal: within 48 hours<br>Audit: 5–10 business days<br>Ongoing retainer: monthly</div></div></div>
       <div class="process-steps">
-        <div class="process-step">
-          <div class="process-num">01</div>
-          <div class="process-content"><h3>Free Practice Assessment</h3><p>A 30-minute conversation about your current setup. We identify your specific risks and tell you exactly what needs to be addressed.</p></div>
-        </div>
-        <div class="process-step">
-          <div class="process-num">02</div>
-          <div class="process-content"><h3>Fixed-Price Proposal</h3><p>A clear written proposal within 48 hours. You know the full cost before you commit to anything.</p></div>
-        </div>
-        <div class="process-step">
-          <div class="process-num">03</div>
-          <div class="process-content"><h3>Compliance Implementation</h3><p>We handle the documentation, registration, and setup. Your staff receive training designed for their roles, not for IT professionals.</p></div>
-        </div>
-        <div class="process-step">
-          <div class="process-num">04</div>
-          <div class="process-content"><h3>Monthly Partnership</h3><p>A monthly check-in, compliance monitoring, and a direct line to your TACFundi specialist whenever you need us.</p></div>
-        </div>
+        <div class="process-step"><div class="process-num">01</div><div class="process-content"><h3>Free Practice Assessment</h3><p>A 30-minute conversation about your current setup. We identify your specific risks and tell you exactly what needs to be addressed.</p></div></div>
+        <div class="process-step"><div class="process-num">02</div><div class="process-content"><h3>Fixed-Price Proposal</h3><p>A clear written proposal within 48 hours. You know the full cost before you commit to anything.</p></div></div>
+        <div class="process-step"><div class="process-num">03</div><div class="process-content"><h3>Compliance Implementation</h3><p>We handle the documentation, registration, and setup. Your staff receive training designed for their roles, not IT professionals.</p></div></div>
+        <div class="process-step"><div class="process-num">04</div><div class="process-content"><h3>Monthly Partnership</h3><p>A monthly check-in, compliance monitoring, and a direct line to your TACFundi specialist whenever you need us.</p></div></div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- CTA BAND -->
 <section class="cta-band">
-  <div class="container-sm">
-    <h2>Protect your patients' privacy.</h2>
-    <p>Book a free 30-minute practice assessment. We'll tell you exactly where you stand — plainly, professionally, with no obligation.</p>
-    <div class="cta-btns">
-      <a href="faq-contact.html#assessment" class="btn btn-gold">Book Free Assessment →</a>
-      <a href="faq-contact.html" class="btn btn-outline-white">Have a Question?</a>
-    </div>
-  </div>
+  <div class="container-sm"><h2>Protect your patients' privacy.</h2><p>Book a free 30-minute practice assessment. We'll tell you exactly where you stand — plainly, professionally, with no obligation.</p><div class="cta-btns"><a href="faq-contact.html#assessment" class="btn btn-gold">Book Free Assessment →</a><a href="faq-contact.html" class="btn btn-outline-white">Have a Question?</a></div></div>
 </section>
-
-<!-- COMPLIANCE STRIP -->
-<div style="background:#0a1a30;border-top:1px solid rgba(34,197,94,0.2);border-bottom:1px solid rgba(34,197,94,0.2);padding:20px 6%;">
+<div style="background:#0a1a30;border-top:1px solid rgba(34,197,94,0.2);padding:20px 6%;">
   <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
-    <div style="display:flex;align-items:center;gap:14px;">
-      <div style="width:40px;height:40px;border-radius:10px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-      </div>
-      <div>
-        <div style="font-size:13px;font-weight:700;color:#4ade80;margin-bottom:2px;">Registered with the Information Regulator of South Africa</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.45);">Registration No. 2026-003992 · Information Officer: Calvin Ndava · Registered 18 March 2026 · TACFundi practises what it preaches.</div>
-      </div>
-    </div>
-    <a href="faq-contact.html" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#4ade80;text-decoration:none;border:1px solid rgba(34,197,94,0.3);padding:8px 16px;border-radius:6px;white-space:nowrap;transition:all 0.2s;" onmouseover="this.style.background='rgba(34,197,94,0.1)'" onmouseout="this.style.background='transparent'">
-      Verify our compliance →
-    </a>
+    <div style="display:flex;align-items:center;gap:14px;flex:1;min-width:0;"><div style="width:40px;height:40px;border-radius:10px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+    <div><div style="font-size:13px;font-weight:700;color:#4ade80;margin-bottom:2px;">Registered with the Information Regulator of South Africa</div><div style="font-size:11px;color:rgba(255,255,255,0.45);">Reg. No. 2026-003992 · Information Officer: Calvin Ndava · Registered 18 March 2026</div></div></div>
+    <a href="faq-contact.html" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#4ade80;text-decoration:none;border:1px solid rgba(34,197,94,0.3);padding:8px 16px;border-radius:6px;white-space:nowrap;flex-shrink:0;" onmouseover="this.style.background='rgba(34,197,94,0.1)'" onmouseout="this.style.background='transparent'">Verify →</a>
   </div>
 </div>
-
+<!-- TACFundi AI ChatBot -->
+<script>
+window.TACFundiBot = {
+  apiKey: 'AIzaSyAOdDjgV2FHeNUs6g9TwcMLxjHCpAy9uAk',
+  model: 'gemini-2.0-flash',
+  botName: 'POPIA Assistant',
+  greeting: 'Hi! How can I help your practice with POPIA compliance today?',
+  primaryColor: '#0D2240',
+  accentColor: '#B8860B',
+  position: 'bottom-right',
+  poweredBy: 'TACFundi',
+  systemPrompt: 'You are a professional POPIA compliance assistant for TACFundi — South Africa\'s cybersecurity specialist for law firms and medical practices. Services: POPIA Compliance Audit R999-R3,500, Monthly Retainer R599-R799/month, Staff Training R499/person. Free 30-min assessment at tacfundi.co.za. Phone: +27 71 975 1571. Email: tacfundi@zohomail.com. Reg. No. 2026-003992. Answer POPIA questions clearly in plain language. Recommend services when relevant. Never give specific legal advice.'
+};
+</script>
+<script src="widget-live.js"></script>
 <footer>
   <div class="footer-grid">
-    <div>
-      <div class="footer-logo"><span>TAC</span><span class="fundi">Fundi</span></div>
-      <p class="footer-tagline">South Africa's cybersecurity specialist for law firms and medical practices. POPIA compliance handled professionally, plainly, and affordably.</p>
-      <div class="footer-contact">Sandton Business District, Gauteng<br><a href="tel:+27719751571">+27 71 975 1571</a><br><a href="tacfundi@zohomail.com"><span class="__cf_email__" data-cfemail="d3a7b2b093a7b2b0b5a6bdb7bafdb0bcfda9b2">Email</span></a></div>
-    </div>
-    <div class="footer-col"><h4>Services</h4><a href="services-law.html">For Law Firms</a><a href="services-medical.html">For Medical Practices</a><a href="#packages">POPIA Audit</a><a href="#packages">Monthly Retainer</a><a href="#packages">Staff Training</a></div>
+    <div><div class="footer-logo"><span>TAC</span><span class="fundi">Fundi</span></div><p class="footer-tagline">South Africa's cybersecurity specialist for law firms and medical practices.</p><div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);border-radius:6px;padding:8px 12px;margin-bottom:14px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:12px;font-weight:600;color:#4ade80;">Registered — Information Regulator SA</span></div><br><div style="font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:14px;">Reg. No. 2026-003992 · Calvin Ndava · 18 March 2026</div><div class="footer-contact">Sandton, Gauteng<br><a href="tel:+27719751571">+27 71 975 1571</a><br><a href="mailto:tac@tacfundi.co.za">tac@tacfundi.co.za</a></div></div>
+    <div class="footer-col"><h4>Services</h4><a href="services-law.html">For Law Firms</a><a href="services-medical.html">For Medical Practices</a><a href="services-law.html#packages">POPIA Audit</a><a href="services-law.html#packages">Monthly Retainer</a><a href="services-law.html#packages">Staff Training</a></div>
     <div class="footer-col"><h4>Company</h4><a href="index.html">Home</a><a href="faq-contact.html">FAQ</a><a href="faq-contact.html#contact">Contact Us</a><a href="faq-contact.html#assessment">Free Assessment</a></div>
     <div class="footer-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">POPIA Statement</a></div>
   </div>
-  <div class="footer-bottom"><span>© 2025 TACFundi. All rights reserved.</span><div style="display:flex;gap:20px;"><a href="www.linkedin.com/in/tac-fundi-3275043b8">LinkedIn</a><a href="#">Facebook</a></div></div>
+  <div class="footer-bottom"><span>© 2026 TACFundi. All rights reserved.</span><div style="display:flex;gap:20px;"><a href="https://www.linkedin.com/in/tac-fundi-3275043b8" target="_blank">LinkedIn</a><a href="#">Facebook</a></div></div>
 </footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function toggleMenu(){document.getElementById('mobMenu').classList.toggle('open');}
-const obs=new IntersectionObserver((e)=>{e.forEach(i=>{if(i.isIntersecting){i.target.style.opacity='1';i.target.style.transform='translateY(0)';}});},{threshold:0.1});
-document.querySe
+<script>
+function toggleNav(){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(!t||!n)return;var o=n.classList.contains('open');t.classList.toggle('open',!o);n.classList.toggle('open',!o);t.setAttribute('aria-label',o?'Open menu':'Close menu');}
+document.addEventListener('click',function(e){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t&&n&&!t.contains(e.target)&&!n.contains(e.target)){t.classList.remove('open');n.classList.remove('open');}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t&&n){t.classList.remove('open');n.classList.remove('open');}}});
+document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t)t.classList.remove('open');if(n)n.classList.remove('open');});});
+</script>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){var id=this.getAttribute('href').substring(1);var el=document.getElementById(id);if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});}});
+});
+</script>
+</body>
+</html>
