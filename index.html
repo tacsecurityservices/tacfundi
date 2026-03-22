@@ -10,64 +10,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
 <style>
-:root {
-  --navy:#0D2240;--navy2:#152d52;--gold:#B8860B;--gold2:#d4a017;
-  --gold-light:#f5e6c0;--slate:#4A5568;--body:#2D3748;--light:#F7F8FA;
-  --white:#ffffff;--border:#D1D9E0;--border2:#e8edf2;
-  --radius:4px;--radius-lg:12px;
-  --shadow:0 4px 24px rgba(13,34,64,0.08);--shadow-lg:0 12px 48px rgba(13,34,64,0.14);
-}
+:root{--navy:#0D2240;--navy2:#152d52;--gold:#B8860B;--gold2:#d4a017;--gold-light:#f5e6c0;--slate:#4A5568;--body:#2D3748;--light:#F7F8FA;--white:#ffffff;--border:#D1D9E0;--border2:#e8edf2;--radius:4px;--radius-lg:12px;--shadow:0 4px 24px rgba(13,34,64,0.08);--shadow-lg:0 12px 48px rgba(13,34,64,0.14);}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;color:var(--body);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased;}
 h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;}
-
-/* NAV */
-.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:72px;}
-.nav-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);text-decoration:none;display:flex;align-items:baseline;letter-spacing:-0.02em;}
-.nav-logo .tac{color:var(--navy);font-weight:900;}
-.nav-logo .fundi{color:var(--gold);font-weight:600;font-style:italic;}
-.nav-links{display:flex;align-items:center;gap:32px;}
-.nav-links a{font-size:14px;font-weight:500;color:var(--slate);text-decoration:none;transition:color 0.2s;}
-.nav-links a:hover{color:var(--navy);}
-.nav-links a.active{color:var(--navy);font-weight:600;}
-.nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:10px 22px;border-radius:var(--radius);font-size:13px!important;font-weight:600!important;transition:background 0.2s!important;}
-.nav-cta:hover{background:var(--navy2)!important;}
-.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px;}
-.hamburger span{display:block;width:22px;height:2px;background:var(--navy);transition:all 0.3s;}
-.mob-menu{display:none;position:fixed;top:72px;left:0;right:0;bottom:0;background:var(--white);z-index:99;padding:40px 6%;flex-direction:column;gap:28px;border-top:1px solid var(--border2);overflow-y:auto;}
-.mob-menu.open{display:flex;}
-.mob-menu a{font-size:20px;font-weight:500;color:var(--navy);text-decoration:none;}
-
-/* BTNs */
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--radius);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer;border:none;transition:all 0.22s;letter-spacing:0.01em;}
-.btn-primary{background:var(--navy);color:var(--white);}
-.btn-primary:hover{background:var(--navy2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(13,34,64,0.22);}
-.btn-gold{background:var(--gold);color:var(--white);}
-.btn-gold:hover{background:var(--gold2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(184,134,11,0.3);}
-.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy);}
-.btn-outline:hover{background:var(--navy);color:var(--white);}
-.btn-outline-white{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.5);}
-.btn-outline-white:hover{background:rgba(255,255,255,0.1);border-color:white;}
-
-/* LAYOUT */
-.section{padding:96px 6%;}
-.section-sm{padding:64px 6%;}
-.container{max-width:1100px;margin:0 auto;}
-.container-sm{max-width:760px;margin:0 auto;}
-
-/* LABELS */
+.btn-primary{background:var(--navy);color:var(--white);} .btn-primary:hover{background:var(--navy2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(13,34,64,0.22);}
+.btn-gold{background:var(--gold);color:var(--white);} .btn-gold:hover{background:var(--gold2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(184,134,11,0.3);}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy);} .btn-outline:hover{background:var(--navy);color:var(--white);}
+.btn-outline-white{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.5);} .btn-outline-white:hover{background:rgba(255,255,255,0.1);border-color:white;}
+.btn-sm{padding:10px 20px;font-size:13px;}
+.section{padding:96px 6%;} .section-sm{padding:64px 6%;}
+.container{max-width:1100px;margin:0 auto;} .container-sm{max-width:760px;margin:0 auto;}
 .section-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
 .section-label::before{content:'';display:block;width:24px;height:1.5px;background:var(--gold);}
 .gold-rule{width:48px;height:3px;background:var(--gold);margin:20px 0;}
-
-/* HERO */
 .hero{background:var(--navy);position:relative;overflow:hidden;padding:112px 6% 96px;}
 .hero::before{content:'';position:absolute;top:-40%;right:-10%;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(184,134,11,0.12) 0%,transparent 70%);pointer-events:none;}
-.hero::after{content:'';position:absolute;bottom:-20%;left:-5%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.03) 0%,transparent 70%);pointer-events:none;}
 .hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(184,134,11,0.15);border:1px solid rgba(184,134,11,0.3);color:var(--gold2);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:24px;}
-.hero h1{font-size:clamp(40px,4.5vw,56px);color:var(--white);font-weight:700;line-height:1.15;margin-bottom:20px;letter-spacing:-0.02em;}
+.hero h1{font-size:clamp(32px,4.5vw,56px);color:var(--white);font-weight:700;line-height:1.15;margin-bottom:20px;letter-spacing:-0.02em;}
 .hero h1 em{color:var(--gold2);font-style:normal;}
 .hero-sub{font-size:17px;color:rgba(255,255,255,0.72);line-height:1.7;margin-bottom:36px;font-weight:300;}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
@@ -78,49 +41,34 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;}
 .risk-dot{width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:7px;flex-shrink:0;}
 .risk-text{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.6;}
 .risk-text strong{color:white;font-weight:600;display:block;margin-bottom:2px;}
-
-/* TRUST BAR */
 .trust-bar{background:var(--light);border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);padding:24px 6%;}
 .trust-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;}
 .trust-item{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:var(--navy);}
 .trust-icon{width:18px;height:18px;color:var(--gold);}
-
-/* PROBLEM SECTION */
-.problem-section{background:var(--white);}
 .problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
-.problem-text h2{font-size:clamp(32px,3.5vw,44px);color:var(--navy);line-height:1.2;margin-bottom:24px;letter-spacing:-0.02em;}
+.problem-text h2{font-size:clamp(26px,3.5vw,44px);color:var(--navy);line-height:1.2;margin-bottom:24px;letter-spacing:-0.02em;}
 .problem-text p{font-size:16px;color:var(--slate);line-height:1.8;margin-bottom:16px;}
-.problem-stat-grid{display:flex;flex-direction:column;gap:16px;}
-.stat-card{background:var(--light);border:1px solid var(--border2);border-left:4px solid var(--gold);border-radius:var(--radius-lg);padding:24px 28px;}
+.stat-card{background:var(--light);border:1px solid var(--border2);border-left:4px solid var(--gold);border-radius:var(--radius-lg);padding:24px 28px;margin-bottom:16px;}
 .stat-num{font-family:'Playfair Display',serif;font-size:40px;font-weight:700;color:var(--navy);line-height:1;}
 .stat-label{font-size:14px;color:var(--slate);margin-top:4px;}
-
-/* HOW WE WORK */
 .how-section{background:var(--navy);}
-.how-section h2{font-size:clamp(32px,3.5vw,44px);color:var(--white);margin-bottom:12px;letter-spacing:-0.02em;}
-.how-section .sub{color:rgba(255,255,255,0.65);font-size:17px;margin-bottom:56px;}
 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.step-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:36px 32px;transition:all 0.25s;}
+.step-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:36px 28px;transition:all 0.25s;}
 .step-card:hover{background:rgba(255,255,255,0.08);transform:translateY(-4px);}
 .step-num{font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:var(--gold);opacity:0.6;line-height:1;margin-bottom:16px;}
 .step-card h3{font-family:'DM Sans',sans-serif;font-size:17px;font-weight:600;color:var(--white);margin-bottom:10px;}
 .step-card p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;}
-
-/* NICHES */
-.niches-section{background:var(--white);}
 .niches-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:48px;}
 .niche-card{border:1px solid var(--border2);border-radius:var(--radius-lg);overflow:hidden;transition:all 0.25s;}
 .niche-card:hover{box-shadow:0 12px 40px rgba(13,34,64,0.1);transform:translateY(-3px);}
 .niche-header{background:var(--navy);padding:32px 36px;}
-.niche-header h3{font-size:26px;color:var(--white);margin-bottom:6px;letter-spacing:-0.01em;}
+.niche-header h3{font-size:26px;color:var(--white);margin-bottom:6px;}
 .niche-header p{font-size:14px;color:rgba(255,255,255,0.6);}
 .niche-body{padding:32px 36px;}
 .niche-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px;}
 .niche-list li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--slate);}
 .niche-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:8px;flex-shrink:0;}
 .niche-fear{background:var(--light);border-radius:var(--radius);padding:16px 20px;font-size:13px;color:var(--slate);font-style:italic;border-left:3px solid var(--gold);}
-
-/* TESTIMONIAL */
 .testimonial-section{background:var(--light);border-top:1px solid var(--border2);}
 .testimonial-card{background:var(--white);border:1px solid var(--border2);border-radius:var(--radius-lg);padding:48px;max-width:720px;margin:0 auto;text-align:center;box-shadow:var(--shadow);}
 .testimonial-quote{font-family:'Playfair Display',serif;font-size:22px;font-style:italic;color:var(--navy);line-height:1.6;margin-bottom:24px;}
@@ -129,101 +77,85 @@ h1,h2,h3,h4,.serif{font-family:'Playfair Display',Georgia,serif;}
 .testimonial-role{font-size:13px;color:var(--slate);}
 .stars{display:flex;justify-content:center;gap:4px;margin-bottom:20px;}
 .star{color:var(--gold);font-size:18px;}
-
-/* CTA BAND */
 .cta-band{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);padding:80px 6%;text-align:center;position:relative;overflow:hidden;}
-.cta-band::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(184,134,11,0.1) 0%,transparent 70%);pointer-events:none;}
-.cta-band h2{font-size:clamp(28px,3.5vw,42px);color:var(--white);margin-bottom:14px;letter-spacing:-0.02em;position:relative;}
-.cta-band p{font-size:17px;color:rgba(255,255,255,0.7);margin-bottom:36px;position:relative;}
-.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;}
+.cta-band h2{font-size:clamp(26px,3.5vw,42px);color:var(--white);margin-bottom:14px;letter-spacing:-0.02em;}
+.cta-band p{font-size:17px;color:rgba(255,255,255,0.7);margin-bottom:36px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
 
-/* FOOTER */
-footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;}
 .footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.1);}
 .footer-logo{font-family:'Playfair Display',serif;font-size:24px;color:white;margin-bottom:10px;}
 .footer-logo .fundi{color:var(--gold2);font-style:italic;}
 .footer-tagline{font-size:13px;line-height:1.8;margin-bottom:16px;}
 .footer-contact{font-size:13px;color:rgba(255,255,255,0.5);}
 .footer-contact a{color:rgba(255,255,255,0.5);text-decoration:none;}
-.footer-col h4{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:white;margin-bottom:16px;}
+.footer-col h4{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:white;margin-bottom:16px;}
 .footer-col a{display:block;font-size:14px;color:rgba(255,255,255,0.55);text-decoration:none;margin-bottom:10px;transition:color 0.2s;}
 .footer-col a:hover{color:var(--gold2);}
 .footer-bottom{max-width:1100px;margin:24px auto 0;display:flex;justify-content:space-between;align-items:center;font-size:13px;}
 .footer-bottom a{color:rgba(255,255,255,0.4);text-decoration:none;}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr!important;gap:32px!important;}}
+@media(max-width:640px){
+  .section{padding:56px 5%!important;}
+  .section-sm{padding:40px 5%!important;}
+  .footer-grid{grid-template-columns:1fr!important;}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center;}
+  .hero-btns,.cta-btns,.page-hero-btns,.hero-btns{flex-direction:column;align-items:stretch!important;}
+  .hero-btns a,.cta-btns a,.page-hero-btns a{text-align:center;justify-content:center;}
+}
+@media(max-width:380px){.nav-logo{font-size:18px;}}
 
-/* ANIMATIONS */
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-.fade-up{opacity:0;animation:fadeUp 0.7s ease forwards;}
-.d1{animation-delay:0.1s;}.d2{animation-delay:0.2s;}.d3{animation-delay:0.3s;}.d4{animation-delay:0.4s;}.d5{animation-delay:0.5s;}
-.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;z-index:200;}
-.nav-toggle span{display:block;width:24px;height:2px;background:white;border-radius:2px;transition:all 0.3s;}
+/* ── UNIFIED MOBILE NAV ── */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:72px;position:relative;}
+.nav-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);text-decoration:none;display:flex;align-items:baseline;letter-spacing:-0.02em;}
+.nav-logo .tac{color:var(--navy);font-weight:900;}
+.nav-logo .fundi{color:var(--gold);font-weight:600;font-style:italic;}
+.nav-links{display:flex;align-items:center;gap:32px;}
+.nav-links a{font-size:14px;font-weight:500;color:var(--slate);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--navy);}
+.nav-links a.active{color:var(--navy);font-weight:600;}
+.nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:10px 22px;border-radius:var(--radius);font-size:13px!important;font-weight:600!important;transition:background 0.2s!important;}
+.nav-cta:hover{background:var(--navy2)!important;}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;z-index:200;flex-shrink:0;}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--navy);border-radius:2px;transition:all 0.3s ease;}
 .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-.nav-toggle.open span:nth-child(2){opacity:0;}
+.nav-toggle.open span:nth-child(2){opacity:0;transform:scaleX(0);}
 .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 @media(max-width:768px){
   .nav-toggle{display:flex;}
-  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#0D2240;flex-direction:column;padding:16px 24px 24px;border-top:1px solid rgba(255,255,255,0.1);box-shadow:0 8px 24px rgba(0,0,0,0.2);z-index:100;}
+  .nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy);flex-direction:column;padding:12px 0 20px;gap:0;box-shadow:0 8px 32px rgba(0,0,0,0.2);border-top:1px solid rgba(255,255,255,0.08);z-index:99;}
   .nav-links.open{display:flex;}
-  .nav-links a{padding:14px 0;font-size:16px;border-bottom:1px solid rgba(255,255,255,0.08);}
+  .nav-links a{padding:14px 24px;font-size:16px;color:rgba(255,255,255,0.8)!important;border-bottom:1px solid rgba(255,255,255,0.07);font-weight:500;}
+  .nav-links a:hover{color:white!important;background:rgba(255,255,255,0.06);}
+  .nav-links a.active{color:white!important;font-weight:600;}
   .nav-links a:last-child{border-bottom:none;}
-  .nav-cta{margin-top:12px;text-align:center;padding:14px !important;}
+  .nav-cta{margin:12px 24px 0;text-align:center;padding:13px 22px!important;border-radius:var(--radius);background:var(--gold)!important;color:#000!important;font-size:15px!important;display:block;}
+  .nav-cta:hover{background:var(--gold2)!important;}
 }
-/* RESPONSIVE */
-@media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;}
-  .problem-grid{grid-template-columns:1fr;}
-  .steps-grid{grid-template-columns:1fr;}
-  .niches-grid{grid-template-columns:1fr;}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:32px;}
-}
-@media(max-width:640px){
-  .nav-links{display:none;}
-  .hamburger{display:flex;}
-  .hero{padding:72px 6% 64px;}
-  .section{padding:64px 5%;}
-  .footer-grid{grid-template-columns:1fr;}
-  .hero-btns{flex-direction:column;}
-  .trust-inner{gap:24px;}
-}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.fade-up{opacity:0;animation:fadeUp 0.7s ease forwards;}
+.d1{animation-delay:0.1s;}.d2{animation-delay:0.2s;}.d3{animation-delay:0.3s;}.d4{animation-delay:0.4s;}
+@media(max-width:900px){.hero-inner,.problem-grid,.steps-grid,.niches-grid{grid-template-columns:1fr!important;gap:40px!important;}}
+@media(max-width:640px){.hero{padding:64px 5% 56px!important;}.hero h1{font-size:30px!important;}.trust-inner{flex-direction:column;gap:14px!important;align-items:flex-start;}.niche-header,.niche-body{padding:24px!important;}.testimonial-card{padding:24px 16px!important;}.step-card{padding:24px 20px!important;}}
 </style>
 </head>
 <body>
-<button class="nav-toggle" id="navToggle" aria-label="Menu" onclick="toggleNav()">
-  <span></span><span></span><span></span>
-</button>
-<!-- NAV -->
-<nav class="nav">
+<nav class="nav" id="mainNav">
   <a href="index.html" class="nav-logo"><span class="tac">TAC</span><span class="fundi">Fundi</span></a>
-  <div class="nav-links">
+  <div class="nav-links" id="navLinks">
     <a href="index.html" class="active">Home</a>
-    <a href="services-law.html">Law Firms</a>
-    <a href="services-medical.html">Medical Practices</a>
-    <a href="faq-contact.html">Contact</a>
+    <a href="services-law.html" >Law Firms</a>
+    <a href="services-medical.html" >Medical Practices</a>
+    <a href="faq-contact.html" >Contact</a>
     <a href="faq-contact.html#assessment" class="nav-cta">Free Assessment</a>
   </div>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" onclick="toggleNav()">
     <span></span><span></span><span></span>
   </button>
 </nav>
-<div class="mob-menu" id="mobMenu">
-  <a href="index.html">Home</a>
-  <a href="services-law.html">For Law Firms</a>
-  <a href="services-medical.html">For Medical Practices</a>
-  <a href="faq-contact.html">FAQ & Contact</a>
-  <a href="faq-contact.html#assessment" class="btn btn-primary btn-sm" style="width:fit-content">Free Assessment →</a>
-</div>
-
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px;">
-        
-        <div class="hero-badge fade-up d1" style="background:rgba(34,197,94,0.15);border-color:rgba(34,197,94,0.35);color:#4ade80;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-          Registered — Info Regulator No. 2026-003992
-        </div>
-      </div>
+      <div class="hero-badge fade-up d1" style="background:rgba(34,197,94,0.15);border-color:rgba(34,197,94,0.35);color:#4ade80;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Registered — Info Regulator No. 2026-003992</div>
       <h1 class="fade-up d1">Your firm handles <em>sensitive data</em> every day. Is it protected?</h1>
       <p class="hero-sub fade-up d2">TACFundi is South Africa's cybersecurity specialist for law firms and medical practices. We handle POPIA compliance and data security — professionally, plainly, and affordably.</p>
       <div class="hero-btns fade-up d3">
@@ -233,193 +165,98 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
     </div>
     <div class="hero-card fade-up d4">
       <div class="hero-card-title">Is your practice exposed?</div>
-      <div class="risk-item">
-        <div class="risk-dot"></div>
-        <div class="risk-text"><strong>No registered Information Officer</strong>Required under POPIA — your compliance status is publicly visible on the CIPC BizPortal.</div>
-      </div>
-      <div class="risk-item">
-        <div class="risk-dot"></div>
-        <div class="risk-text"><strong>Unencrypted client files</strong>Emailing sensitive documents without encryption is one of the most common and costly breach causes in SA.</div>
-      </div>
-      <div class="risk-item">
-        <div class="risk-dot"></div>
-        <div class="risk-text"><strong>No breach response plan</strong>POPIA requires notification within a reasonable time. Most practices have no plan in place.</div>
-      </div>
-      <div class="risk-item">
-        <div class="risk-dot"></div>
-        <div class="risk-text"><strong>Untrained staff</strong>Most breaches start with one click on a phishing email. Most staff have never been trained.</div>
-      </div>
+      <div class="risk-item"><div class="risk-dot"></div><div class="risk-text"><strong>No registered Information Officer</strong>Required under POPIA — your compliance status is publicly visible on the CIPC BizPortal.</div></div>
+      <div class="risk-item"><div class="risk-dot"></div><div class="risk-text"><strong>Unencrypted client files</strong>Emailing sensitive documents without encryption is one of the most common and costly breach causes in SA.</div></div>
+      <div class="risk-item"><div class="risk-dot"></div><div class="risk-text"><strong>No breach response plan</strong>POPIA requires notification within a reasonable time. Most practices have no plan in place.</div></div>
+      <div class="risk-item"><div class="risk-dot"></div><div class="risk-text"><strong>Untrained staff</strong>Most breaches start with one click on a phishing email. Most staff have never been trained.</div></div>
     </div>
   </div>
 </section>
-
-<!-- TRUST BAR -->
 <div class="trust-bar">
   <div class="trust-inner">
-    <div class="trust-item" style="color:#16a34a;font-weight:700;">
-      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-      Reg. No. 2026-003992
-    </div>
-    <div class="trust-item">
-      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      POPIA Specialists
-    </div>
-    <div class="trust-item">
-      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-      Sandton-Based
-    </div>
-    <div class="trust-item">
-      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      Law Firms & Medical
-    </div>
-    <div class="trust-item">
-      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12 19.79 19.79 0 0 1 1.93 3.49a2 2 0 0 1 1.98-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      Plain Language Guaranteed
-    </div>
-    <div class="trust-item">
-      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-      Fixed Transparent Pricing
-    </div>
+    <div class="trust-item" style="color:#16a34a;font-weight:700;"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Reg. No. 2026-003992</div>
+    <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>POPIA Specialists</div>
+    <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Sandton-Based</div>
+    <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Law Firms & Medical</div>
+    <div class="trust-item"><svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Fixed Transparent Pricing</div>
   </div>
 </div>
-
-<!-- PROBLEM SECTION -->
-<section class="section problem-section">
+<section class="section" style="background:var(--white);">
   <div class="container">
     <div class="problem-grid">
-      <div class="problem-text">
+      <div>
         <div class="section-label">The Risk Is Real</div>
-        <h2>The law is clear. The exposure is real. The window is closing.</h2>
+        <h2 style="font-size:clamp(26px,3.5vw,44px);color:var(--navy);line-height:1.2;margin-bottom:24px;letter-spacing:-0.02em;">The law is clear. The exposure is real. The window is closing.</h2>
         <div class="gold-rule"></div>
-        <p>Under the Protection of Personal Information Act, your practice is legally required to protect every piece of client or patient personal information you hold. This isn't optional guidance — it's a legal obligation with serious consequences for non-compliance.</p>
-        <p>Most South African law firms and medical practices handle this data every day without proper protection in place. Most have been meaning to address it for months — or years.</p>
-        <p style="margin-bottom:32px;">TACFundi exists for exactly this moment. We are the specialists who make compliance straightforward, affordable, and done — so you can focus on your clients.</p>
+        <p style="font-size:16px;color:var(--slate);line-height:1.8;margin-bottom:16px;">Under the Protection of Personal Information Act, your practice is legally required to protect every piece of client or patient personal information you hold. This isn't optional guidance — it's a legal obligation with serious consequences for non-compliance.</p>
+        <p style="font-size:16px;color:var(--slate);line-height:1.8;margin-bottom:16px;">Most South African law firms and medical practices handle this data every day without proper protection in place. Most have been meaning to address it for months — or years.</p>
+        <p style="font-size:16px;color:var(--slate);line-height:1.8;margin-bottom:32px;">TACFundi exists for exactly this moment. We are the specialists who make compliance straightforward, affordable, and done — so you can focus on your clients.</p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
           <a href="services-law.html" class="btn btn-primary">For Law Firms →</a>
           <a href="services-medical.html" class="btn btn-outline">For Medical Practices →</a>
         </div>
       </div>
-      <div class="problem-stat-grid">
-        <div class="stat-card">
-          <div class="stat-num">R10M</div>
-          <div class="stat-label">Maximum POPIA fine for non-compliance per incident</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">80%</div>
-          <div class="stat-label">Of SA businesses have experienced a cyberattack — most were SMEs</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">72 hrs</div>
-          <div class="stat-label">Typical time you have to notify the Information Regulator after a breach</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">Public</div>
-          <div class="stat-label">Your POPIA compliance status is now visible on the CIPC BizPortal — clients can check</div>
-        </div>
+      <div>
+        <div class="stat-card"><div class="stat-num">R10M</div><div class="stat-label">Maximum POPIA fine for non-compliance per incident</div></div>
+        <div class="stat-card"><div class="stat-num">80%</div><div class="stat-label">Of SA businesses have experienced a cyberattack — most were SMEs</div></div>
+        <div class="stat-card"><div class="stat-num">72 hrs</div><div class="stat-label">Typical time to notify the Information Regulator after a breach</div></div>
+        <div class="stat-card"><div class="stat-num">Public</div><div class="stat-label">Your POPIA compliance status is now visible on the CIPC BizPortal</div></div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- HOW WE WORK -->
 <section class="section how-section">
   <div class="container">
     <div style="text-align:center;margin-bottom:56px;">
       <div class="section-label" style="justify-content:center;color:var(--gold2);">How TACFundi Works</div>
-      <h2 style="font-size:clamp(32px,3.5vw,44px);color:white;margin-bottom:12px;letter-spacing:-0.02em;">Simple. Transparent. Done for you.</h2>
+      <h2 style="font-size:clamp(26px,3.5vw,44px);color:white;margin-bottom:12px;letter-spacing:-0.02em;">Simple. Transparent. Done for you.</h2>
       <p style="font-size:17px;color:rgba(255,255,255,0.6);max-width:560px;margin:0 auto;">No jargon. No surprises. No pressure. Just a clear path from where you are now to where you need to be.</p>
     </div>
     <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-num">01</div>
-        <h3>Free 30-Minute Assessment</h3>
-        <p>We review your current setup and tell you exactly where your risks are. Plain language. No jargon. No obligation. You leave knowing where you stand.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">02</div>
-        <h3>Your Personalised Plan</h3>
-        <p>We show you what needs to be fixed, in what order, at a clear fixed price. You decide what to do next — we never pressure you into anything.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">03</div>
-        <h3>We Handle Everything</h3>
-        <p>From POPIA registration to staff training to monthly monitoring. You focus on your clients. We handle the rest — and we speak to you in plain language, always.</p>
-      </div>
+      <div class="step-card"><div class="step-num">01</div><h3>Free 30-Minute Assessment</h3><p>We review your current setup and tell you exactly where your risks are. Plain language. No jargon. No obligation. You leave knowing where you stand.</p></div>
+      <div class="step-card"><div class="step-num">02</div><h3>Your Personalised Plan</h3><p>We show you what needs to be fixed, in what order, at a clear fixed price. You decide what to do next — we never pressure you into anything.</p></div>
+      <div class="step-card"><div class="step-num">03</div><h3>We Handle Everything</h3><p>From POPIA registration to staff training to monthly monitoring. You focus on your clients. We handle the rest — and we speak to you in plain language, always.</p></div>
     </div>
-    <div style="text-align:center;margin-top:48px;">
-      <a href="faq-contact.html#assessment" class="btn btn-gold">Book Your Free Assessment →</a>
-    </div>
+    <div style="text-align:center;margin-top:48px;"><a href="faq-contact.html#assessment" class="btn btn-gold">Book Your Free Assessment →</a></div>
   </div>
 </section>
-
-<!-- NICHES -->
-<section class="section niches-section">
+<section class="section" style="background:var(--white);">
   <div class="container">
     <div style="text-align:center;margin-bottom:48px;">
       <div class="section-label" style="justify-content:center;">Our Specialisations</div>
-      <h2 style="font-size:clamp(32px,3.5vw,44px);color:var(--navy);letter-spacing:-0.02em;">We only work with two industries.<br>That means we understand yours.</h2>
+      <h2 style="font-size:clamp(26px,3.5vw,44px);color:var(--navy);letter-spacing:-0.02em;">We only work with two industries.<br>That means we understand yours.</h2>
     </div>
     <div class="niches-grid">
       <div class="niche-card">
-        <div class="niche-header">
-          <h3>Law Firms</h3>
-          <p>Gauteng & Western Cape · 2–25 attorneys</p>
-        </div>
+        <div class="niche-header"><h3>Law Firms</h3><p>Gauteng & Western Cape · 2–25 attorneys</p></div>
         <div class="niche-body">
-          <ul class="niche-list">
-            <li>POPIA compliance audit & Information Officer registration</li>
-            <li>Client file and document security assessment</li>
-            <li>Data breach response planning</li>
-            <li>Staff phishing awareness training</li>
-            <li>Monthly compliance monitoring retainer</li>
-          </ul>
+          <ul class="niche-list"><li>POPIA compliance audit & Information Officer registration</li><li>Client file and document security assessment</li><li>Data breach response planning</li><li>Staff phishing awareness training</li><li>Monthly compliance monitoring retainer</li></ul>
           <div class="niche-fear">"Our partners have been asking about POPIA for two years. We just don't know where to start."</div>
-          <div style="margin-top:24px;">
-            <a href="services-law.html" class="btn btn-primary btn-sm">Services for Law Firms →</a>
-          </div>
+          <div style="margin-top:24px;"><a href="services-law.html" class="btn btn-primary btn-sm">Services for Law Firms →</a></div>
         </div>
       </div>
       <div class="niche-card">
-        <div class="niche-header">
-          <h3>Medical Practices</h3>
-          <p>GPs, Specialists & Private Clinics</p>
-        </div>
+        <div class="niche-header"><h3>Medical Practices</h3><p>GPs, Specialists & Private Clinics</p></div>
         <div class="niche-body">
-          <ul class="niche-list">
-            <li>Healthcare data POPIA compliance audit</li>
-            <li>Patient records handling assessment</li>
-            <li>Practice management software security review</li>
-            <li>Staff training for receptionists and admin</li>
-            <li>Breach notification process setup</li>
-          </ul>
+          <ul class="niche-list"><li>Healthcare data POPIA compliance audit</li><li>Patient records handling assessment</li><li>Practice management software security review</li><li>Staff training for receptionists and admin</li><li>Breach notification process setup</li></ul>
           <div class="niche-fear">"I know we should be protecting patient data better. I just need someone to handle it."</div>
-          <div style="margin-top:24px;">
-            <a href="services-medical.html" class="btn btn-primary btn-sm">Services for Medical Practices →</a>
-          </div>
+          <div style="margin-top:24px;"><a href="services-medical.html" class="btn btn-primary btn-sm">Services for Medical Practices →</a></div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- TESTIMONIAL -->
 <section class="section-sm testimonial-section">
   <div class="container">
-    <div style="text-align:center;margin-bottom:40px;">
-      <div class="section-label" style="justify-content:center;">Client Feedback</div>
-    </div>
+    <div style="text-align:center;margin-bottom:40px;"><div class="section-label" style="justify-content:center;">Client Feedback</div></div>
     <div class="testimonial-card">
-      <div class="stars">
-        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-      </div>
+      <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
       <div class="testimonial-quote">We had been putting off POPIA compliance for over a year. TACFundi handled everything in two weeks. Our partners finally have peace of mind — and we now understand exactly what we have and how it's protected.</div>
       <div class="testimonial-author">Practice Manager</div>
       <div class="testimonial-role">Sandton Commercial Law Firm</div>
     </div>
   </div>
 </section>
-
-<!-- CTA BAND -->
 <section class="cta-band">
   <div class="container-sm">
     <h2>Ready to protect your practice?</h2>
@@ -430,25 +267,20 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
     </div>
   </div>
 </section>
-
-<!-- COMPLIANCE STRIP -->
-<div style="background:#0a1a30;border-top:1px solid rgba(34,197,94,0.2);border-bottom:1px solid rgba(34,197,94,0.2);padding:20px 6%;">
+<div style="background:#0a1a30;border-top:1px solid rgba(34,197,94,0.2);padding:20px 6%;">
   <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
-    <div style="display:flex;align-items:center;gap:14px;">
+    <div style="display:flex;align-items:center;gap:14px;flex:1;min-width:0;">
       <div style="width:40px;height:40px;border-radius:10px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
       </div>
       <div>
         <div style="font-size:13px;font-weight:700;color:#4ade80;margin-bottom:2px;">Registered with the Information Regulator of South Africa</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.45);">Registration No. 2026-003992 · Information Officer: Calvin Ndava · Registered 18 March 2026 · TACFundi practises what it preaches.</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.45);">Reg. No. 2026-003992 · Information Officer: Calvin Ndava · Registered 18 March 2026</div>
       </div>
     </div>
-    <a href="faq-contact.html" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#4ade80;text-decoration:none;border:1px solid rgba(34,197,94,0.3);padding:8px 16px;border-radius:6px;white-space:nowrap;transition:all 0.2s;" onmouseover="this.style.background='rgba(34,197,94,0.1)'" onmouseout="this.style.background='transparent'">
-      Verify our compliance →
-    </a>
+    <a href="faq-contact.html" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#4ade80;text-decoration:none;border:1px solid rgba(34,197,94,0.3);padding:8px 16px;border-radius:6px;white-space:nowrap;flex-shrink:0;" onmouseover="this.style.background='rgba(34,197,94,0.1)'" onmouseout="this.style.background='transparent'">Verify →</a>
   </div>
 </div>
-
 <!-- TACFundi AI ChatBot -->
 <script>
 window.TACFundiBot = {
@@ -460,87 +292,34 @@ window.TACFundiBot = {
   accentColor: '#B8860B',
   position: 'bottom-right',
   poweredBy: 'TACFundi',
-  systemPrompt: 'You are a professional POPIA compliance assistant for TACFundi. Help law firms and medical practices understand their POPIA obligations. Services: Audits R999-R3500, Monthly Retainer R599-R799/month, Staff Training R499/person. Free 30-min assessment at tacfundi.co.za. Phone: +27 71 975 1571.'
+  systemPrompt: 'You are a professional POPIA compliance assistant for TACFundi — South Africa\'s cybersecurity specialist for law firms and medical practices. Services: POPIA Compliance Audit R999-R3,500, Monthly Retainer R599-R799/month, Staff Training R499/person. Free 30-min assessment at tacfundi.co.za. Phone: +27 71 975 1571. Email: tacfundi@zohomail.com. Reg. No. 2026-003992. Answer POPIA questions clearly in plain language. Recommend services when relevant. Never give specific legal advice.'
 };
 </script>
 <script src="widget-live.js"></script>
-
-<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div>
       <div class="footer-logo"><span>TAC</span><span class="fundi">Fundi</span></div>
       <p class="footer-tagline">South Africa's cybersecurity specialist for law firms and medical practices. POPIA compliance handled professionally, plainly, and affordably.</p>
-      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);border-radius:6px;padding:8px 12px;margin-bottom:14px;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-        <span style="font-size:12px;font-weight:600;color:#4ade80;">Registered — Information Regulator SA</span>
-      </div><br>
-      <div style="font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:14px;">
-        Reg. No. 2026-003992 · Information Officer: Calvin Ndava · Registered 18 March 2026
-      </div>
-      <div class="footer-contact">
-        Sandton Business District, Gauteng<br>
-        <a href="tel:+27719751571">+27 71 975 1571</a><br>
-        <a href="mailto:tac@tacfundi.co.za">tac@tacfundi.co.za</a><br>
-        Mon–Fri: 8am–6pm · Sat: 9am–1pm
-      </div>
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);border-radius:6px;padding:8px 12px;margin-bottom:14px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:12px;font-weight:600;color:#4ade80;">Registered — Information Regulator SA</span></div><br>
+      <div style="font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:14px;">Reg. No. 2026-003992 · Information Officer: Calvin Ndava · Registered 18 March 2026</div>
+      <div class="footer-contact">Sandton Business District, Gauteng<br><a href="tel:+27719751571">+27 71 975 1571</a><br><a href="mailto:tac@tacfundi.co.za">tac@tacfundi.co.za</a></div>
     </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <a href="services-law.html">For Law Firms</a>
-      <a href="services-medical.html">For Medical Practices</a>
-      <a href="services-law.html#popia-audit">POPIA Audit</a>
-      <a href="services-law.html#retainer">Monthly Retainer</a>
-      <a href="services-law.html#training">Staff Training</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="index.html">Home</a>
-      <a href="faq-contact.html">FAQ</a>
-      <a href="faq-contact.html#contact">Contact Us</a>
-      <a href="faq-contact.html#assessment">Free Assessment</a>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-      <a href="#">POPIA Statement</a>
-    </div>
+    <div class="footer-col"><h4>Services</h4><a href="services-law.html">For Law Firms</a><a href="services-medical.html">For Medical Practices</a><a href="services-law.html#packages">POPIA Audit</a><a href="services-law.html#packages">Monthly Retainer</a><a href="services-law.html#packages">Staff Training</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="index.html">Home</a><a href="faq-contact.html">FAQ</a><a href="faq-contact.html#contact">Contact Us</a><a href="faq-contact.html#assessment">Free Assessment</a></div>
+    <div class="footer-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">POPIA Statement</a></div>
   </div>
-  <div class="footer-bottom">
-    <span>© 2026 TACFundi. All rights reserved. · Info Regulator Reg. No. 2026-003992</span>
-    <div style="display:flex;gap:20px;">
-      <a href="www.linkedin.com/in/tac-fundi-3275043b8">LinkedIn</a>
-      <a href="#">Facebook</a>
-    </div>
-  </div>
+  <div class="footer-bottom"><span>© 2026 TACFundi. All rights reserved. · Reg. No. 2026-003992</span><div style="display:flex;gap:20px;"><a href="https://www.linkedin.com/in/tac-fundi-3275043b8" target="_blank">LinkedIn</a><a href="#">Facebook</a></div></div>
 </footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function toggleMenu(){
-  document.getElementById('mobMenu').classList.toggle('open');
-}
-// Intersection observer for scroll animations
-const obs = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});
-},{threshold:0.1});
-document.qu
 <script>
-function toggleNav(){
-  document.getElementById('navToggle').classList.toggle('open');
-  document.getElementById('navLinks').classList.toggle('open');
-}
-document.querySelectorAll('.nav-links a').forEach(function(a){
-  a.addEventListener('click',function(){
-    document.getElementById('navToggle').classList.remove('open');
-    document.getElementById('navLinks').classList.remove('open');
-  });
-});
-document.addEventListener('click',function(e){
-  var t=document.getElementById('navToggle');
-  var n=document.getElementById('navLinks');
-  if(t&&n&&!t.contains(e.target)&&!n.contains(e.target)){
-    t.classList.remove('open');n.classList.remove('open');
-  }
-});
+function toggleNav(){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(!t||!n)return;var o=n.classList.contains('open');t.classList.toggle('open',!o);n.classList.toggle('open',!o);t.setAttribute('aria-label',o?'Open menu':'Close menu');}
+document.addEventListener('click',function(e){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t&&n&&!t.contains(e.target)&&!n.contains(e.target)){t.classList.remove('open');n.classList.remove('open');t.setAttribute('aria-label','Open menu');}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t&&n){t.classList.remove('open');n.classList.remove('open');}}});
+document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t)t.classList.remove('open');if(n)n.classList.remove('open');});});
 </script>
+<script>
+var obs=new IntersectionObserver(function(e){e.forEach(function(i){if(i.isIntersecting){i.target.style.opacity='1';i.target.style.transform='translateY(0)';}});},{threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
+</script>
+</body>
+</html>
