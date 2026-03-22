@@ -155,7 +155,19 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
 .fade-up{opacity:0;animation:fadeUp 0.7s ease forwards;}
 .d1{animation-delay:0.1s;}.d2{animation-delay:0.2s;}.d3{animation-delay:0.3s;}.d4{animation-delay:0.4s;}.d5{animation-delay:0.5s;}
-
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;z-index:200;}
+.nav-toggle span{display:block;width:24px;height:2px;background:white;border-radius:2px;transition:all 0.3s;}
+.nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-toggle.open span:nth-child(2){opacity:0;}
+.nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+@media(max-width:768px){
+  .nav-toggle{display:flex;}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#0D2240;flex-direction:column;padding:16px 24px 24px;border-top:1px solid rgba(255,255,255,0.1);box-shadow:0 8px 24px rgba(0,0,0,0.2);z-index:100;}
+  .nav-links.open{display:flex;}
+  .nav-links a{padding:14px 0;font-size:16px;border-bottom:1px solid rgba(255,255,255,0.08);}
+  .nav-links a:last-child{border-bottom:none;}
+  .nav-cta{margin-top:12px;text-align:center;padding:14px !important;}
+}
 /* RESPONSIVE */
 @media(max-width:900px){
   .hero-inner{grid-template-columns:1fr;}
@@ -176,7 +188,9 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
 </style>
 </head>
 <body>
-
+<button class="nav-toggle" id="navToggle" aria-label="Menu" onclick="toggleNav()">
+  <span></span><span></span><span></span>
+</button>
 <!-- NAV -->
 <nav class="nav">
   <a href="index.html" class="nav-logo"><span class="tac">TAC</span><span class="fundi">Fundi</span></a>
@@ -511,3 +525,22 @@ const obs = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});
 },{threshold:0.1});
 document.qu
+<script>
+function toggleNav(){
+  document.getElementById('navToggle').classList.toggle('open');
+  document.getElementById('navLinks').classList.toggle('open');
+}
+document.querySelectorAll('.nav-links a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('navToggle').classList.remove('open');
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+document.addEventListener('click',function(e){
+  var t=document.getElementById('navToggle');
+  var n=document.getElementById('navLinks');
+  if(t&&n&&!t.contains(e.target)&&!n.contains(e.target)){
+    t.classList.remove('open');n.classList.remove('open');
+  }
+});
+</script>
