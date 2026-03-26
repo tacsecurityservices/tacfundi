@@ -118,16 +118,18 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
 .form-label{display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:8px;}
 .form-input,
 .form-textarea,
-.form-select{width:100%;padding:14px 16px;border:1.5px solid var(--border2);border-radius:var(--radius-lg);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--body);background:var(--white);transition:all 0.2s;}
+.form-select{width:100%;padding:14px 16px;border:1.5px solid var(--border2);border-radius:var(--radius-lg);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--body);background:var(--white);transition:all 0.2s;min-height:44px;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
 .form-input:focus,
 .form-textarea:focus,
 .form-select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,134,11,0.1);}
-.form-textarea{resize:vertical;min-height:120px;line-height:1.6;}
+.form-textarea{resize:vertical;min-height:120px;line-height:1.6;padding:14px 16px;}
+.form-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234A5568' d='M6 9L1 4h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-color:var(--white);padding-right:40px;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 
-.form-submit{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--navy);color:var(--white);border:none;border-radius:var(--radius);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.22s;width:100%!important;justify-content:center;}
+.form-submit{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--navy);color:var(--white);border:none;border-radius:var(--radius);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.22s;width:100%!important;justify-content:center;min-height:48px;-webkit-tap-highlight-color:transparent;}
 .form-submit:hover{background:var(--navy2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(13,34,64,0.22);}
 .form-submit:active{transform:translateY(0);}
+.form-submit:disabled{opacity:0.6;cursor:not-allowed;}
 
 .form-success{background:rgba(34,197,94,0.1);border:1.5px solid rgba(34,197,94,0.3);border-radius:var(--radius-lg);padding:20px 24px;margin-bottom:24px;display:none;align-items:center;gap:12px;}
 .form-success.show{display:flex;}
@@ -176,21 +178,199 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
 .footer-col a:hover{color:var(--gold2);}
 .footer-bottom{max-width:1100px;margin:24px auto 0;display:flex;justify-content:space-between;align-items:center;font-size:13px;}
 .footer-bottom a{color:rgba(255,255,255,0.4);text-decoration:none;}
-@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr!important;gap:32px!important;} .packages-grid,.steps-grid,.included-grid,.profile-grid,.diff-grid,.practice-grid,.intro-band-inner,.problem-band-inner,.contact-grid,.assessment-inner,.form-row{grid-template-columns:1fr!important;} .process-section>div{grid-template-columns:1fr!important;}}
-@media(max-width:640px){
-  .section{padding:56px 5%!important;} .section-sm{padding:40px 5%!important;}
-  .page-hero{padding:56px 5% 48px!important;} .cta-band{padding:56px 5%!important;} .assessment-section{padding:56px 5%!important;}
-  .footer-grid{grid-template-columns:1fr!important;} .footer-bottom{flex-direction:column;gap:12px;text-align:center;}
-  .hero-btns,.cta-btns,.page-hero-btns,.hero-btns{flex-direction:column;align-items:stretch!important;}
-  .hero-btns a,.cta-btns a,.page-hero-btns a{text-align:center;justify-content:center;}
-  .pkg-header,.pkg-body,.niche-header,.niche-body,.fear-card,.step-card,.assessment-card,.contact-form-wrap{padding:20px!important;}
-  .testimonial-card{padding:24px 16px!important;}
-  .trust-inner{flex-direction:column;gap:14px!important;align-items:flex-start;}
-  .process-step{grid-template-columns:60px 1fr!important;gap:16px!important;} .process-num{font-size:36px!important;}
-  .faq-tab{padding:9px 10px!important;font-size:12px!important;}
-  .form-row{grid-template-columns:1fr!important;}
+/* ── TABLET & MEDIUM SCREENS (900px and below) ── */
+@media(max-width:900px){
+  .footer-grid{grid-template-columns:1fr 1fr!important;gap:32px!important;} 
+  .packages-grid,.steps-grid,.included-grid,.profile-grid,.diff-grid,.practice-grid,.intro-band-inner,.problem-band-inner,.contact-grid,.assessment-inner,.form-row{grid-template-columns:1fr!important;} 
+  .process-section>div{grid-template-columns:1fr!important;}
+  .problem-band-inner,.profile-grid{gap:48px!important;}
+  .intro-band-inner{grid-template-columns:repeat(2,1fr)!important;gap:20px!important;}
+  .intro-stat{padding:16px!important;}
+  .intro-stat-num{font-size:28px!important;}
+  .intro-stat-label{font-size:12px!important;}
+  .packages-grid{grid-template-columns:1fr!important;}
 }
-@media(max-width:380px){.nav-logo{font-size:18px;}}
+
+/* ── TABLET SCREENS (768px - 900px) ── */
+@media(max-width:768px){
+  .nav-logo{font-size:20px;}
+  .section{padding:64px 5%!important;} 
+  .section-sm{padding:48px 5%!important;}
+  .page-hero{padding:64px 5% 56px!important;} 
+  .page-hero h1{font-size:clamp(28px,5vw,42px)!important;}
+  .cta-band{padding:64px 5%!important;} 
+  .assessment-section{padding:64px 5%!important;}
+  .intro-band{padding:36px 5%!important;}
+  .intro-band-inner{grid-template-columns:repeat(2,1fr)!important;}
+  .problem-band-inner{grid-template-columns:1fr!important;gap:40px!important;}
+  .fear-card{padding:28px!important;}
+  .fear-item{padding:12px 0;}
+  .included-grid{grid-template-columns:1fr!important;gap:24px!important;}
+  .process-section .container>div{grid-template-columns:1fr!important;gap:48px!important;}
+  .process-step{gap:24px!important;padding:24px 0!important;}
+  .process-num{font-size:40px!important;}
+  .profile-grid{grid-template-columns:1fr!important;gap:36px!important;}
+  .profile-card{padding:28px!important;}
+  .assessment-container{padding:0!important;}
+  .form-group{margin-bottom:20px!important;}
+  .form-input,.form-textarea,.form-select{padding:12px 14px!important;font-size:16px!important;}
+  .form-submit{padding:12px 24px!important;font-size:14px!important;}
+}
+
+/* ── MOBILE SCREENS (640px and below) ── */
+@media(max-width:640px){
+  html{font-size:15px;}
+  .section{padding:48px 5%!important;} 
+  .section-sm{padding:36px 5%!important;}
+  .page-hero{padding:48px 5% 40px!important;}
+  .page-hero h1{font-size:clamp(24px,6vw,36px)!important;margin-bottom:12px!important;}
+  .page-hero p{font-size:15px!important;margin-bottom:24px!important;}
+  .page-hero-btns{flex-direction:column;gap:12px!important;}
+  .page-hero-btns a{width:100%;text-align:center;justify-content:center;}
+  .cta-band{padding:48px 5%!important;}
+  .cta-band h2{font-size:clamp(22px,5vw,32px)!important;margin-bottom:12px!important;}
+  .cta-band p{font-size:15px!important;margin-bottom:28px!important;}
+  .cta-btns{flex-direction:column;gap:12px!important;}
+  .cta-btns a{width:100%;text-align:center;justify-content:center;}
+  .assessment-section{padding:48px 5%!important;}
+  .assessment-header h2{font-size:clamp(22px,5vw,32px)!important;}
+  .assessment-header p{font-size:15px!important;}
+  .footer-grid{grid-template-columns:1fr!important;gap:28px!important;} 
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center;}
+  .footer-logo{font-size:20px!important;margin-bottom:8px!important;}
+  .footer-col h4{font-size:10px!important;margin-bottom:12px!important;}
+  .footer-col a{font-size:13px!important;margin-bottom:8px!important;}
+  
+  /* Hero & CTAs */
+  .hero-btns,.cta-btns,.page-hero-btns{flex-direction:column;align-items:stretch!important;}
+  .hero-btns a,.cta-btns a,.page-hero-btns a{text-align:center;justify-content:center;padding:13px 20px!important;width:100%!important;}
+  
+  /* Packages */
+  .packages-grid{grid-template-columns:1fr!important;gap:20px!important;}
+  .pkg-card{margin-bottom:12px!important;}
+  .pkg-header{padding:20px 18px 16px!important;}
+  .pkg-body{padding:20px 18px!important;}
+  .pkg-price{padding:16px 18px!important;}
+  .pkg-icon{width:40px!important;height:40px!important;margin-bottom:12px!important;}
+  .pkg-icon svg{width:18px!important;height:18px!important;}
+  .pkg-title{font-size:18px!important;}
+  .pkg-list li{font-size:12px!important;gap:8px!important;}
+  .pkg-price .amount{font-size:28px!important;}
+  .pkg-price .period{font-size:13px!important;}
+  
+  /* Intro Band */
+  .intro-band{padding:28px 5%!important;border-bottom:1px solid var(--border2);}
+  .intro-band-inner{grid-template-columns:1fr!important;gap:16px!important;}
+  .intro-stat{padding:14px 12px!important;text-align:center;}
+  .intro-stat-num{font-size:24px!important;}
+  .intro-stat-label{font-size:11px!important;}
+  
+  /* Problem Band */
+  .problem-band-inner{grid-template-columns:1fr!important;gap:32px!important;}
+  .problem-band h2{font-size:clamp(22px,5vw,32px)!important;}
+  .problem-band p{font-size:15px!important;}
+  .fear-card{padding:20px!important;margin-top:20px!important;}
+  .fear-card h3{font-size:13px!important;margin-bottom:16px!important;}
+  .fear-item{padding:12px 0!important;}
+  .fear-num{font-size:18px!important;}
+  .fear-text{font-size:13px!important;}
+  
+  /* Included Grid */
+  .included-grid{grid-template-columns:1fr!important;gap:16px!important;}
+  .included-item{gap:14px!important;padding:18px!important;}
+  .included-icon{width:40px!important;height:40px!important;min-width:40px!important;}
+  .included-icon svg{width:18px!important;height:18px!important;}
+  .included-item h3{font-size:15px!important;margin-bottom:4px!important;}
+  .included-item p{font-size:12px!important;}
+  
+  /* Process */
+  .process-section .container>div{grid-template-columns:1fr!important;gap:32px!important;}
+  .process-section h2{font-size:clamp(22px,5vw,32px)!important;}
+  .process-section p{font-size:14px!important;}
+  .process-step{grid-template-columns:50px 1fr!important;gap:12px!important;padding:20px 0!important;} 
+  .process-num{font-size:28px!important;}
+  .process-content h3{font-size:15px!important;margin-bottom:6px!important;}
+  .process-content p{font-size:13px!important;}
+  
+  /* Profile */
+  .profile-grid{grid-template-columns:1fr!important;gap:28px!important;}
+  .profile-card{padding:20px!important;}
+  .profile-card h3{font-size:17px!important;margin-bottom:12px!important;}
+  .profile-row{padding:10px 0!important;font-size:13px!important;}
+  .profile-key{min-width:100px!important;}
+  .quote-block{padding:24px!important;}
+  .quote-block blockquote{font-size:16px!important;line-height:1.5!important;}
+  
+  /* Form Styles */
+  .assessment-container{max-width:100%!important;}
+  .assessment-header{margin-bottom:32px!important;}
+  .assessment-header h2{margin-bottom:8px!important;}
+  .assessment-header p{font-size:14px!important;}
+  .form-group{margin-bottom:18px!important;}
+  .form-label{font-size:13px!important;margin-bottom:6px!important;}
+  .form-input,.form-textarea,.form-select{padding:14px 12px!important;font-size:16px!important;border-radius:8px!important;}
+  .form-textarea{min-height:100px!important;}
+  .form-row{grid-template-columns:1fr!important;gap:12px!important;}
+  .form-submit{padding:14px 20px!important;font-size:14px!important;width:100%!important;border-radius:8px!important;}
+  .form-success{padding:16px 14px!important;font-size:13px!important;gap:10px!important;}
+  .form-success svg{width:18px!important;height:18px!important;}
+  .form-error{font-size:11px!important;}
+  
+  /* Navigation */
+  .nav{height:64px!important;padding:0 5%!important;}
+  .nav-logo{font-size:18px!important;}
+  .nav-links{gap:0;}
+  .nav-links a{padding:12px 18px!important;font-size:14px!important;}
+  .nav-cta{margin:8px 18px 12px!important;padding:12px 18px!important;}
+  
+  /* Buttons */
+  .btn{padding:12px 20px!important;font-size:14px!important;}
+  .btn-sm{padding:10px 16px!important;font-size:12px!important;}
+  
+  /* Breadcrumb */
+  .breadcrumb{font-size:12px!important;}
+  
+  /* Gold Rule */
+  .gold-rule{width:40px!important;margin:16px 0!important;}
+  
+  /* Section Labels */
+  .section-label{font-size:10px!important;margin-bottom:12px!important;}
+  .section-label::before{width:20px!important;height:1px!important;}
+  
+  /* Cross Link */
+  .cross-link{padding:16px 18px!important;flex-direction:column!important;align-items:flex-start!important;gap:6px!important;}
+  .cross-link-title{font-size:14px!important;}
+}
+
+/* ── SMALL MOBILE SCREENS (480px and below) ── */
+@media(max-width:480px){
+  .nav-logo{font-size:16px!important;}
+  .nav{height:60px!important;padding:0 4%!important;}
+  .page-hero{padding:40px 4% 32px!important;}
+  .page-hero h1{font-size:clamp(20px,6vw,28px)!important;}
+  .intro-stat-num{font-size:22px!important;}
+  .intro-stat-label{font-size:10px!important;}
+  .form-input,.form-textarea,.form-select{font-size:16px!important;padding:13px 12px!important;}
+  .process-num{font-size:24px!important;}
+  .pkg-price .amount{font-size:24px!important;}
+  .included-item{padding:14px!important;}
+  .form-label{font-size:12px!important;}
+  .form-submit{padding:12px 16px!important;}
+}
+
+/* ── EXTRA SMALL SCREENS (380px and below) ── */
+@media(max-width:380px){
+  .nav-logo{font-size:14px!important;}
+  .page-hero h1{font-size:clamp(18px,5vw,24px)!important;}
+  .page-hero p{font-size:14px!important;}
+  .intro-stat-num{font-size:20px!important;}
+  .intro-stat-label{font-size:9px!important;line-height:1.3!important;}
+  .process-num{font-size:20px!important;}
+  .pkg-price .amount{font-size:22px!important;}
+  .form-input,.form-textarea,.form-select{padding:12px 10px!important;border-radius:6px!important;}
+  .intro-band-inner{gap:12px!important;}
+  .intro-stat{padding:12px 8px!important;}
+}
 </style>
 <body>
 
@@ -453,7 +633,7 @@ window.TACFundiBot = {
       <p class="footer-tagline">South Africa's cybersecurity specialist for law firms and medical practices. POPIA compliance handled professionally, plainly, and affordably.</p>
       <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);border-radius:6px;padding:8px 12px;margin-bottom:14px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:12px;font-weight:600;color:#4ade80;">Registered — Information Regulator SA</span></div><br>
       <div style="font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:14px;">Reg. No. 2026-003992 · Information Officer: Calvin Ndava · Registered 18 March 2026</div>
-      <div class="footer-contact">Sandton Business District, Gauteng<br><a href="tel:+27719751571">+27 71 975 1571</a><br><a href="mailto:tacfundi@zohomail.com">tac@tacfundi.co.za</a></div>
+      <div class="footer-contact">Sandton Business District, Gauteng<br><a href="tel:+27719751571">+27 71 975 1571</a><br><a href="/cdn-cgi/l/email-protection#3347525055465d575a73495c5b5c5e525a5f1d505c5e"><span class="__cf_email__" data-cfemail="403421230034212326352e24296e232f6e3a21">[email&#160;protected]</span></a></div>
     </div>
     <div class="footer-col"><h4>Services</h4><a href="services-law.html">For Law Firms</a><a href="services-medical.html">For Medical Practices</a><a href="services-law.html#packages">POPIA Audit</a><a href="services-law.html#packages">Monthly Retainer</a><a href="services-law.html#packages">Staff Training</a></div>
     <div class="footer-col"><h4>Company</h4><a href="index.html">Home</a><a href="faq-contact.html">FAQ</a><a href="faq-contact.html#contact">Contact Us</a><a href="services-law.html#assessment">Free Assessment</a></div>
@@ -461,7 +641,7 @@ window.TACFundiBot = {
   </div>
   <div class="footer-bottom"><span>© 2026 TACFundi. All rights reserved. · Reg. No. 2026-003992</span><div style="display:flex;gap:20px;"><a href="https://www.linkedin.com/in/tac-fundi-3275043b8" target="_blank">LinkedIn</a><a href="#">Facebook</a></div></div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function toggleNav(){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(!t||!n)return;var o=n.classList.contains('open');t.classList.toggle('open',!o);n.classList.toggle('open',!o);t.setAttribute('aria-label',o?'Open menu':'Close menu');}
 document.addEventListener('click',function(e){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t&&n&&!t.contains(e.target)&&!n.contains(e.target)){t.classList.remove('open');n.classList.remove('open');}});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t&&n){t.classList.remove('open');n.classList.remove('open');}}});
@@ -499,12 +679,4 @@ document.getElementById('assessmentForm').addEventListener('submit', function(e)
 
 // Smooth scroll to anchor links
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
-  a.addEventListener('click',function(e){
-    var id=this.getAttribute('href').substring(1);
-    var el=document.getElementById(id);
-    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});};
-  });
-});
-</script>
-</body>
-</html>
+  a.addEven
