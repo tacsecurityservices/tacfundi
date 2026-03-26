@@ -106,6 +106,37 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
 .cross-link:hover{background:rgba(184,134,11,0.2);border-color:var(--gold);}
 .cross-link-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);margin-bottom:4px;}
 .cross-link-title{font-size:16px;font-weight:600;color:var(--navy);}
+
+/* ── ASSESSMENT FORM STYLES ── */
+.assessment-section{background:var(--light);padding:80px 6%;border-top:1px solid var(--border2);}
+.assessment-container{max-width:800px;margin:0 auto;}
+.assessment-header{text-align:center;margin-bottom:48px;}
+.assessment-header h2{font-size:clamp(26px,3vw,40px);color:var(--navy);letter-spacing:-0.02em;margin-bottom:12px;}
+.assessment-header p{font-size:16px;color:var(--slate);line-height:1.7;}
+
+.form-group{margin-bottom:24px;}
+.form-label{display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:8px;}
+.form-input,
+.form-textarea,
+.form-select{width:100%;padding:14px 16px;border:1.5px solid var(--border2);border-radius:var(--radius-lg);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--body);background:var(--white);transition:all 0.2s;}
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,134,11,0.1);}
+.form-textarea{resize:vertical;min-height:120px;line-height:1.6;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+
+.form-submit{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--navy);color:var(--white);border:none;border-radius:var(--radius);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.22s;width:100%!important;justify-content:center;}
+.form-submit:hover{background:var(--navy2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(13,34,64,0.22);}
+.form-submit:active{transform:translateY(0);}
+
+.form-success{background:rgba(34,197,94,0.1);border:1.5px solid rgba(34,197,94,0.3);border-radius:var(--radius-lg);padding:20px 24px;margin-bottom:24px;display:none;align-items:center;gap:12px;}
+.form-success.show{display:flex;}
+.form-success svg{color:#22c55e;flex-shrink:0;}
+.form-success-text{font-size:14px;color:#166534;font-weight:600;}
+
+.form-error{color:#dc2626;font-size:12px;margin-top:6px;display:none;}
+.form-error.show{display:block;}
+
 /* ── UNIFIED MOBILE NAV ── */
 .nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border2);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:72px;position:relative;}
 .nav-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);text-decoration:none;display:flex;align-items:baseline;letter-spacing:-0.02em;}
@@ -145,10 +176,10 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
 .footer-col a:hover{color:var(--gold2);}
 .footer-bottom{max-width:1100px;margin:24px auto 0;display:flex;justify-content:space-between;align-items:center;font-size:13px;}
 .footer-bottom a{color:rgba(255,255,255,0.4);text-decoration:none;}
-@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr!important;gap:32px!important;} .packages-grid,.steps-grid,.included-grid,.profile-grid,.diff-grid,.practice-grid,.intro-band-inner,.problem-band-inner,.contact-grid,.assessment-inner{grid-template-columns:1fr!important;} .process-section>div{grid-template-columns:1fr!important;}}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr!important;gap:32px!important;} .packages-grid,.steps-grid,.included-grid,.profile-grid,.diff-grid,.practice-grid,.intro-band-inner,.problem-band-inner,.contact-grid,.assessment-inner,.form-row{grid-template-columns:1fr!important;} .process-section>div{grid-template-columns:1fr!important;}}
 @media(max-width:640px){
   .section{padding:56px 5%!important;} .section-sm{padding:40px 5%!important;}
-  .page-hero{padding:56px 5% 48px!important;} .cta-band{padding:56px 5%!important;}
+  .page-hero{padding:56px 5% 48px!important;} .cta-band{padding:56px 5%!important;} .assessment-section{padding:56px 5%!important;}
   .footer-grid{grid-template-columns:1fr!important;} .footer-bottom{flex-direction:column;gap:12px;text-align:center;}
   .hero-btns,.cta-btns,.page-hero-btns,.hero-btns{flex-direction:column;align-items:stretch!important;}
   .hero-btns a,.cta-btns a,.page-hero-btns a{text-align:center;justify-content:center;}
@@ -182,7 +213,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
     <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.35);border-radius:100px;padding:6px 14px;margin-bottom:20px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#4ade80;">Registered — Info Regulator No.2026-003992</span></div>
     <h1>Cybersecurity for <em>South African Law Firms</em></h1>
     <p>Your clients trust you with their most sensitive legal matters. TACFundi ensures that trust is never broken by a data breach or POPIA violation.</p>
-    <div class="page-hero-btns"><a href="faq-contact.html#assessment" class="btn btn-gold">Book Free Assessment →</a><a href="#packages" class="btn btn-outline-white">View Packages</a></div>
+    <div class="page-hero-btns"><a href="#assessment" class="btn btn-gold">Book Free Assessment →</a><a href="#packages" class="btn btn-outline-white">View Packages</a></div>
   </div>
 </section>
 <div class="intro-band">
@@ -203,7 +234,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
         <p class="problem-band">Every property transfer, divorce settlement, commercial contract, and estate matter your firm handles contains sensitive personal information. Under POPIA, you are legally required to protect it — and to have demonstrable systems in place to do so.</p>
         <p class="problem-band">The Information Regulator is active. Fines are being issued. Client data breaches are now among the leading causes of professional negligence claims in the South African legal sector.</p>
         <p class="problem-band">TACFundi specialises in helping law firms meet their POPIA obligations without disrupting the practice or requiring a single technical conversation. We handle the complexity so you don't have to.</p>
-        <div style="margin-top:32px;"><a href="faq-contact.html#assessment" class="btn btn-primary">Get Your Free Assessment →</a></div>
+        <div style="margin-top:32px;"><a href="#assessment" class="btn btn-primary">Get Your Free Assessment →</a></div>
       </div>
       <div class="fear-card">
         <h3>What we hear from law firms</h3>
@@ -226,18 +257,18 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
       <div class="pkg-card">
         <div class="pkg-header"><div class="pkg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/><path d="M9 14l2 2 4-4"/></svg></div><div class="pkg-name">Once-off</div><div class="pkg-title">POPIA Audit</div><div class="pkg-type">Ideal starting point for any law firm</div></div>
         <div class="pkg-price"><span class="amount">R1,500</span><span class="period"> – R3,500</span><div class="note">Price depends on firm size. Fixed quote after free assessment.</div></div>
-        <div class="pkg-body"><p class="pkg-desc">A thorough review of your current data practices against POPIA requirements — written in plain language, not technical jargon.</p><ul class="pkg-list"><li>Review of current data handling processes</li><li>Gap analysis against POPIA requirements</li><li>Information Officer registration support</li><li>Written compliance report in plain language</li><li>Priority action list — what to fix first</li><li>30-minute results debrief with your partners</li></ul><div class="pkg-cta"><a href="faq-contact.html#assessment" class="btn btn-outline" style="width:100%;justify-content:center;">Book This Service →</a></div></div>
+        <div class="pkg-body"><p class="pkg-desc">A thorough review of your current data practices against POPIA requirements — written in plain language, not technical jargon.</p><ul class="pkg-list"><li>Review of current data handling processes</li><li>Gap analysis against POPIA requirements</li><li>Information Officer registration support</li><li>Written compliance report in plain language</li><li>Priority action list — what to fix first</li><li>30-minute results debrief with your partners</li></ul><div class="pkg-cta"><a href="#assessment" class="btn btn-outline" style="width:100%;justify-content:center;">Book This Service →</a></div></div>
       </div>
       <div class="pkg-card featured">
         <div class="pkg-featured-badge">Most Popular</div>
         <div class="pkg-header" style="padding-top:40px;"><div class="pkg-icon" style="background:var(--navy);"><svg viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="pkg-name">Monthly Retainer</div><div class="pkg-title">The Fundi Retainer</div><div class="pkg-type">Ongoing protection & compliance monitoring</div></div>
         <div class="pkg-price" style="background:var(--gold-light);"><span class="amount" style="color:var(--gold);">R799</span><span class="period"> /month</span><div class="note">Cancel anytime. No lock-in contracts.</div></div>
-        <div class="pkg-body"><p class="pkg-desc">Your dedicated cybersecurity specialist on a monthly basis — for less than the cost of one billable hour per month.</p><ul class="pkg-list"><li>Monthly security health check</li><li>POPIA compliance monitoring & updates</li><li>Staff phishing awareness (quarterly)</li><li>Breach notification drafting support</li><li>Priority WhatsApp support line</li><li>Plain-language monthly security report</li><li>Annual POPIA compliance certificate</li></ul><div class="pkg-cta"><a href="faq-contact.html#assessment" class="btn btn-gold" style="width:100%;justify-content:center;">Start With Free Assessment →</a></div></div>
+        <div class="pkg-body"><p class="pkg-desc">Your dedicated cybersecurity specialist on a monthly basis — for less than the cost of one billable hour per month.</p><ul class="pkg-list"><li>Monthly security health check</li><li>POPIA compliance monitoring & updates</li><li>Staff phishing awareness (quarterly)</li><li>Breach notification drafting support</li><li>Priority WhatsApp support line</li><li>Plain-language monthly security report</li><li>Annual POPIA compliance certificate</li></ul><div class="pkg-cta"><a href="#assessment" class="btn btn-gold" style="width:100%;justify-content:center;">Start With Free Assessment →</a></div></div>
       </div>
       <div class="pkg-card">
         <div class="pkg-header"><div class="pkg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="pkg-name">Once-off or Per Person</div><div class="pkg-title">Staff Security Training</div><div class="pkg-type">POPIA awareness for your entire team</div></div>
         <div class="pkg-price"><span class="amount">R499</span><span class="period"> /person</span><div class="note">Group rate: R1,997 for up to 6 staff members.</div></div>
-        <div class="pkg-body"><p class="pkg-desc">A 90-minute practical training session covering what every member of your firm needs to know about protecting client data.</p><ul class="pkg-list"><li>POPIA obligations for staff explained simply</li><li>Phishing email recognition & response</li><li>Password and device security basics</li><li>What to do if you suspect a breach</li><li>Completion certificate per staff member</li><li>Recording provided for future new hires</li></ul><div class="pkg-cta"><a href="faq-contact.html#assessment" class="btn btn-outline" style="width:100%;justify-content:center;">Book Training →</a></div></div>
+        <div class="pkg-body"><p class="pkg-desc">A 90-minute practical training session covering what every member of your firm needs to know about protecting client data.</p><ul class="pkg-list"><li>POPIA obligations for staff explained simply</li><li>Phishing email recognition & response</li><li>Password and device security basics</li><li>What to do if you suspect a breach</li><li>Completion certificate per staff member</li><li>Recording provided for future new hires</li></ul><div class="pkg-cta"><a href="#assessment" class="btn btn-outline" style="width:100%;justify-content:center;">Book Training →</a></div></div>
       </div>
     </div>
   </div>
@@ -288,18 +319,107 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
         <div class="quote-block">
           <blockquote>We had been putting off POPIA compliance for over a year. TACFundi handled everything in two weeks. Our partners finally have peace of mind.</blockquote>
           <div class="quote-source">Practice Manager · Sandton Commercial Law Firm</div>
-          <div style="margin-top:24px;"><a href="faq-contact.html#assessment" class="btn btn-gold btn-sm">Book Your Free Assessment →</a></div>
+          <div style="margin-top:24px;"><a href="#assessment" class="btn btn-gold btn-sm">Book Your Free Assessment →</a></div>
         </div>
         <a href="services-medical.html" class="cross-link"><div><div class="cross-link-label">Also serving</div><div class="cross-link-title">Medical Practices →</div></div></a>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ── ASSESSMENT FORM SECTION ── -->
+<section class="assessment-section" id="assessment">
+  <div class="assessment-container">
+    <div class="assessment-header">
+      <div class="section-label" style="justify-content:center;">Free Assessment</div>
+      <h2>Get your firm's compliance status in 30 minutes</h2>
+      <p>No obligations. No sales pitch. Just a straightforward conversation about where your firm stands on POPIA compliance and what comes next.</p>
+    </div>
+
+    <form action="https://formspree.io/f/xaqlyvap" method="POST" id="assessmentForm">
+      <div class="form-success" id="formSuccess">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span class="form-success-text">Thanks! We'll be in touch within 24 hours to schedule your assessment.</span>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="fname">First Name *</label>
+          <input type="text" id="fname" name="firstName" class="form-input" required>
+          <div class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="lname">Last Name *</label>
+          <input type="text" id="lname" name="lastName" class="form-input" required>
+          <div class="form-error"></div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address *</label>
+          <input type="email" id="email" name="email" class="form-input" required>
+          <div class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" class="form-input" placeholder="+27 71 975 1571" required>
+          <div class="form-error"></div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="firmName">Firm Name *</label>
+          <input type="text" id="firmName" name="firmName" class="form-input" required>
+          <div class="form-error"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="firmSize">Firm Size *</label>
+          <select id="firmSize" name="firmSize" class="form-select" required>
+            <option value="">Select firm size...</option>
+            <option value="1-5">1–5 attorneys</option>
+            <option value="6-12">6–12 attorneys</option>
+            <option value="13-25">13–25 attorneys</option>
+            <option value="25+">25+ attorneys</option>
+          </select>
+          <div class="form-error"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="concern">What's your main concern about POPIA compliance? *</label>
+        <select id="concern" name="mainConcern" class="form-select" required>
+          <option value="">Select your main concern...</option>
+          <option value="Dont know where to start">Don't know where to start</option>
+          <option value="Data breach risk">Data breach risk</option>
+          <option value="POPIA fine exposure">POPIA fine exposure</option>
+          <option value="Client confidentiality">Client confidentiality</option>
+          <option value="Regulatory compliance">Regulatory compliance</option>
+          <option value="Other">Other</option>
+        </select>
+        <div class="form-error"></div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="message">Tell us a bit about your current setup (optional)</label>
+        <textarea id="message" name="message" class="form-textarea" placeholder="E.g., Are you using cloud storage? Email encryption? Have you registered an Information Officer?"></textarea>
+      </div>
+
+      <button type="submit" class="form-submit">Request Free Assessment →</button>
+
+      <p style="font-size:12px;color:var(--slate);text-align:center;margin-top:16px;">We'll contact you within 24 hours to confirm your assessment time. No spam, no obligation.</p>
+    </form>
+  </div>
+</section>
+
 <section class="cta-band">
   <div class="container-sm">
-    <h2>Ready to protect your firm?</h2>
-    <p>Book a free 30-minute assessment. We'll tell you exactly where you stand — no jargon, no obligation, no sales pressure.</p>
-    <div class="cta-btns"><a href="faq-contact.html#assessment" class="btn btn-gold">Book Free Assessment →</a><a href="faq-contact.html" class="btn btn-outline-white">Have a Question?</a></div>
+    <h2>Questions before you commit?</h2>
+    <p>Check our FAQ or reach out directly. We're here to help law firms navigate POPIA with confidence.</p>
+    <div class="cta-btns"><a href="faq-contact.html" class="btn btn-gold">View FAQ & Contact →</a><a href="tel:+27719751571" class="btn btn-outline-white">Call Us: +27 71 975 1571</a></div>
   </div>
 </section>
 <div style="background:#0a1a30;border-top:1px solid rgba(34,197,94,0.2);padding:20px 6%;">
@@ -333,10 +453,10 @@ window.TACFundiBot = {
       <p class="footer-tagline">South Africa's cybersecurity specialist for law firms and medical practices. POPIA compliance handled professionally, plainly, and affordably.</p>
       <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);border-radius:6px;padding:8px 12px;margin-bottom:14px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:12px;font-weight:600;color:#4ade80;">Registered — Information Regulator SA</span></div><br>
       <div style="font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:14px;">Reg. No. 2026-003992 · Information Officer: Calvin Ndava · Registered 18 March 2026</div>
-      <div class="footer-contact">Sandton Business District, Gauteng<br><a href="tel:+27719751571">+27 71 975 1571</a><br><a href="mailto:tacfundi@zohomail.coma">tac@tacfundi.co.za</a></div>
+      <div class="footer-contact">Sandton Business District, Gauteng<br><a href="tel:+27719751571">+27 71 975 1571</a><br><a href="mailto:tacfundi@zohomail.com">tac@tacfundi.co.za</a></div>
     </div>
     <div class="footer-col"><h4>Services</h4><a href="services-law.html">For Law Firms</a><a href="services-medical.html">For Medical Practices</a><a href="services-law.html#packages">POPIA Audit</a><a href="services-law.html#packages">Monthly Retainer</a><a href="services-law.html#packages">Staff Training</a></div>
-    <div class="footer-col"><h4>Company</h4><a href="index.html">Home</a><a href="faq-contact.html">FAQ</a><a href="faq-contact.html#contact">Contact Us</a><a href="faq-contact.html#assessment">Free Assessment</a></div>
+    <div class="footer-col"><h4>Company</h4><a href="index.html">Home</a><a href="faq-contact.html">FAQ</a><a href="faq-contact.html#contact">Contact Us</a><a href="services-law.html#assessment">Free Assessment</a></div>
     <div class="footer-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">POPIA Statement</a></div>
   </div>
   <div class="footer-bottom"><span>© 2026 TACFundi. All rights reserved. · Reg. No. 2026-003992</span><div style="display:flex;gap:20px;"><a href="https://www.linkedin.com/in/tac-fundi-3275043b8" target="_blank">LinkedIn</a><a href="#">Facebook</a></div></div>
@@ -346,8 +466,38 @@ function toggleNav(){var t=document.getElementById('navToggle'),n=document.getEl
 document.addEventListener('click',function(e){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t&&n&&!t.contains(e.target)&&!n.contains(e.target)){t.classList.remove('open');n.classList.remove('open');}});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t&&n){t.classList.remove('open');n.classList.remove('open');}}});
 document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t)t.classList.remove('open');if(n)n.classList.remove('open');});});
-</script>
-<script>
+
+// ── FORM HANDLING ──
+document.getElementById('assessmentForm').addEventListener('submit', function(e) {
+  var form = this;
+  var inputs = form.querySelectorAll('[required]');
+  var isValid = true;
+
+  inputs.forEach(function(input) {
+    var errorDiv = input.parentElement.querySelector('.form-error');
+    if (!input.value.trim()) {
+      isValid = false;
+      errorDiv.classList.add('show');
+      errorDiv.textContent = 'This field is required';
+    } else {
+      errorDiv.classList.remove('show');
+    }
+  });
+
+  if (isValid) {
+    // Formspree will handle the submission
+    // Show success message after submission
+    setTimeout(function() {
+      var successDiv = document.getElementById('formSuccess');
+      successDiv.classList.add('show');
+      form.style.display = 'none';
+    }, 500);
+  } else {
+    e.preventDefault();
+  }
+});
+
+// Smooth scroll to anchor links
 document.querySelectorAll('a[href^="#"]').forEach(function(a){
   a.addEventListener('click',function(e){
     var id=this.getAttribute('href').substring(1);
