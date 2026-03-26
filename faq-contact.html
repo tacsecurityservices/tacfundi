@@ -167,7 +167,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,0.65)">FAQ & Contact</span></div>
-    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.35);border-radius:100px;padding:6px 14px;margin-bottom:20px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#4ade80;">Registered — Info Regulator No.2026-003992</span></div>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.35);border-radius:100px;padding:6px 14px;margin-bottom:20px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#4ade80;">Registered — Info Regulator No. 2026-003992</span></div>
     <h1>Questions? <em>We have answers.</em></h1>
     <p>Everything you need to know about TACFundi, POPIA compliance, and how we work with law firms and medical practices across South Africa.</p>
   </div>
@@ -228,7 +228,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
       <div class="assessment-card">
         <h3>Book Your Free Assessment</h3>
         <div class="sub">Takes 2 minutes. We'll be in touch within one business day.</div>
-        <form id="assessmentForm" onsubmit="submitAssessment(event)">
+        <form id="assessmentForm" action="https://formspree.io/f/xaqlyvap" method="POST" onsubmit="submitAssessment(event)">
           <label for="assess-name">Your Name *</label>
           <input id="assess-name" name="name" type="text" placeholder="First and last name" required>
           <label for="assess-practice">Practice / Firm Name *</label>
@@ -241,7 +241,9 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
           <select id="assess-type" name="type" required><option value="" disabled selected>Select your practice type</option><option>Law Firm</option><option>Medical Practice — GP</option><option>Medical Practice — Specialist</option><option>Dental Practice</option><option>Allied Health Practice</option><option>Private Clinic</option><option>Other</option></select>
           <label for="assess-method">Preferred Assessment Method</label>
           <select id="assess-method" name="method"><option>Phone call</option><option>Video call (Google Meet or Teams)</option><option>In person — Sandton</option></select>
-          <div style="margin-top:20px;"><button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;">Book My Free Assessment →</button></div>
+          <div style="margin-top:20px;"><input type="hidden" name="_subject" value="TACFundi Free Assessment Booking">
+          <input type="hidden" name="form_type" value="assessment">
+          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;">Book My Free Assessment →</button></div>
           <div class="assessment-note">No credit card. No obligation. We'll confirm within one business day.</div>
         </form>
         <div id="assessSuccessMsg" style="display:none;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);border-radius:var(--radius-lg);padding:20px;text-align:center;margin-top:16px;"><div style="font-size:24px;margin-bottom:8px;">✓</div><p style="font-weight:600;color:var(--gold2);margin-bottom:4px;">Assessment booked!</p><p style="font-size:13px;color:rgba(255,255,255,0.7);">We'll be in touch within one business day to confirm your time.</p></div>
@@ -258,14 +260,14 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
         <div class="gold-rule"></div>
         <p>If you have a question before booking an assessment, or if you have an urgent matter that needs immediate attention, contact us directly. We respond to all enquiries within one business day.</p>
         <div class="contact-detail"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12 19.79 19.79 0 0 1 1.93 3.49a2 2 0 0 1 1.98-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div class="contact-detail-text"><strong>Phone & WhatsApp</strong><a href="tel:+27719751571">+27 71 975 1571</a><br><span style="font-size:13px;color:var(--slate);">Mon–Fri 8am–6pm · Sat 9am–1pm</span></div></div>
-        <div class="contact-detail"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="contact-detail-text"><strong>Email</strong><a href="mailto:tac@tacfundi.co.za">tac@tacfundi.co.za</a></div></div>
+        <div class="contact-detail"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="contact-detail-text"><strong>Email</strong><a href="/cdn-cgi/l/email-protection#aadecbc9eadecbc9ccdfc4cec384c9c584d0cb"><span class="__cf_email__" data-cfemail="cabeaba98abeaba9acbfa4aea3e4a9a5e4b0ab">[email&#160;protected]</span></a></div></div>
         <div class="contact-detail"><div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="contact-detail-text"><strong>Office</strong><span style="color:var(--slate);">Sandton Business District<br>Gauteng, South Africa</span></div></div>
         <div style="margin-top:32px;padding:24px;background:var(--gold-light);border-radius:var(--radius-lg);border:1px solid rgba(184,134,11,0.2);"><div style="font-size:13px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">Urgent matter?</div><p style="font-size:14px;color:var(--navy);line-height:1.6;">If you've experienced a data breach or received communication from the Information Regulator, call us immediately on <strong>+27 71 975 1571</strong>. We treat urgent compliance matters as priority cases.</p></div>
       </div>
       <div class="contact-form-wrap">
         <div class="form-title">Send us a message</div>
         <div class="form-sub">We respond to all enquiries within one business day.</div>
-        <form id="contactForm" onsubmit="submitContact(event)">
+        <form id="contactForm" action="https://formspree.io/f/xaqlyvap" method="POST" onsubmit="submitContact(event)">
           <div class="form-row">
             <div class="form-group"><label for="cf-fname">First Name *</label><input id="cf-fname" name="fname" type="text" placeholder="First name" required></div>
             <div class="form-group"><label for="cf-lname">Last Name *</label><input id="cf-lname" name="lname" type="text" placeholder="Last name" required></div>
@@ -274,6 +276,8 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
           <div class="form-group"><label for="cf-practice">Practice / Firm Name</label><input id="cf-practice" name="practice" type="text" placeholder="Your practice or firm"></div>
           <div class="form-group"><label for="cf-topic">What can we help with? *</label><select id="cf-topic" name="topic" required><option value="" disabled selected>Select a topic</option><option>POPIA compliance audit</option><option>Monthly retainer enquiry</option><option>Staff training</option><option>Urgent — data breach response</option><option>General question</option><option>Other</option></select></div>
           <div class="form-group"><label for="cf-msg">Message *</label><textarea id="cf-msg" name="message" placeholder="Tell us about your practice and what you need…" required></textarea></div>
+          <input type="hidden" name="_subject" value="TACFundi Website Enquiry">
+          <input type="hidden" name="form_type" value="contact">
           <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px;">Send Message →</button>
           <div class="form-note">We respect your privacy. Your details are never shared with third parties.</div>
         </form>
@@ -291,7 +295,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
   </div>
 </div>
 <!-- TACFundi AI ChatBot -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 window.TACFundiBot = {
   apiKey: 'AIzaSyAOdDjgV2FHeNUs6g9TwcMLxjHCpAy9uAk',
   model: 'gemini-2.0-flash',
@@ -306,14 +310,14 @@ window.TACFundiBot = {
 </script>
 <script src="widget-live.js"></script>
 <footer>
-  <div class="footer-grid"><div><div class="footer-logo"><span>TAC</span><span class="fundi">Fundi</span></div><p class="footer-tagline">South Africa's cybersecurity specialist for law firms and medical practices.</p><div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);border-radius:6px;padding:8px 12px;margin-bottom:14px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:12px;font-weight:600;color:#4ade80;">Registered — Information Regulator SA</span></div><br><div style="font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:14px;">Reg. No. 2026-003992 · Calvin Ndava · 18 March 2026</div><div class="footer-contact">Sandton, Gauteng<br><a href="tel:+27719751571">+27 71 975 1571</a><br><a href="mailto:tac@tacfundi.co.za">tac@tacfundi.co.za</a></div></div>
+  <div class="footer-grid"><div><div class="footer-logo"><span>TAC</span><span class="fundi">Fundi</span></div><p class="footer-tagline">South Africa's cybersecurity specialist for law firms and medical practices.</p><div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);border-radius:6px;padding:8px 12px;margin-bottom:14px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:12px;font-weight:600;color:#4ade80;">Registered — Information Regulator SA</span></div><br><div style="font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:14px;">Reg. No. 2026-003992 · Calvin Ndava · 18 March 2026</div><div class="footer-contact">Sandton, Gauteng<br><a href="tel:+27719751571">+27 71 975 1571</a><br><a href="/cdn-cgi/l/email-protection#93e7f2f0d3e7f2f0f5e6fdf7fabdf0fcbde9f2"><span class="__cf_email__" data-cfemail="0f7b6e6c4f7b6e6c697a616b66216c6021756e">[email&#160;protected]</span></a></div></div>
     <div class="footer-col"><h4>Services</h4><a href="services-law.html">For Law Firms</a><a href="services-medical.html">For Medical Practices</a><a href="services-law.html#packages">POPIA Audit</a><a href="services-law.html#packages">Monthly Retainer</a><a href="services-law.html#packages">Staff Training</a></div>
     <div class="footer-col"><h4>Company</h4><a href="index.html">Home</a><a href="faq-contact.html">FAQ</a><a href="faq-contact.html#contact">Contact Us</a><a href="faq-contact.html#assessment">Free Assessment</a></div>
     <div class="footer-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">POPIA Statement</a></div>
   </div>
   <div class="footer-bottom"><span>© 2026 TACFundi. All rights reserved.</span><div style="display:flex;gap:20px;"><a href="https://www.linkedin.com/in/tac-fundi-3275043b8" target="_blank">LinkedIn</a><a href="#">Facebook</a></div></div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function toggleNav(){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(!t||!n)return;var o=n.classList.contains('open');t.classList.toggle('open',!o);n.classList.toggle('open',!o);t.setAttribute('aria-label',o?'Open menu':'Close menu');}
 document.addEventListener('click',function(e){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t&&n&&!t.contains(e.target)&&!n.contains(e.target)){t.classList.remove('open');n.classList.remove('open');}});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t&&n){t.classList.remove('open');n.classList.remove('open');}}});
@@ -334,27 +338,28 @@ function toggleFaq(btn){
 }
 function submitAssessment(e){
   e.preventDefault();
-  var btn=e.target.querySelector('button[type="submit"]');
+  var form=e.target;
+  var btn=form.querySelector('button[type="submit"]');
   btn.textContent='Booking...';btn.disabled=true;
-  setTimeout(function(){e.target.style.display='none';document.getElementById('assessSuccessMsg').style.display='block';},1200);
+  fetch(form.action,{
+    method:'POST',
+    body:new FormData(form),
+    headers:{'Accept':'application/json'}
+  }).then(function(r){
+    if(r.ok){
+      form.style.display='none';
+      document.getElementById('assessSuccessMsg').style.display='block';
+    } else {
+      btn.textContent='Book My Free Assessment →';btn.disabled=false;
+      alert('Something went wrong. Please try again or call us on +27 71 975 1571');
+    }
+  }).catch(function(){
+    btn.textContent='Book My Free Assessment →';btn.disabled=false;
+    alert('Connection error. Please call +27 71 975 1571 or WhatsApp us directly.');
+  });
 }
 function submitContact(e){
   e.preventDefault();
   var btn=e.target.querySelector('button[type="submit"]');
   btn.textContent='Sending...';btn.disabled=true;
-  setTimeout(function(){e.target.style.display='none';document.getElementById('contactSuccessMsg').classList.add('show');},1000);
-}
-document.querySelectorAll('.faq-panel').forEach(function(panel){
-  var first=panel.querySelector('.faq-item');
-  if(first)first.classList.add('open');
-});
-document.querySelectorAll('a[href^="#"]').forEach(function(a){
-  a.addEventListener('click',function(e){
-    var id=this.getAttribute('href').substring(1);
-    var el=document.getElementById(id);
-    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});};
-  });
-});
-</script>
-</body>
-</html>
+  setTimeout(function(){e.target.style.display='none';document.getElementById('contactSuccessMsg').classList.add('show');}
