@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="description" content="TACFundi cybersecurity for SA medical practices — POPIA compliance, patient data protection, staff training. GP surgeries, specialists, private clinics.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>TACFundi | Cybersecurity for SA Medical Practices</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230D2240'/><text y='72' x='8' font-size='58' font-family='Georgia,serif' font-weight='900' fill='white'>T</text><text y='72' x='46' font-size='58' font-family='Georgia,serif' fill='%23B8860B' font-style='italic'>F</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,14 +14,14 @@
 <style>
 :root{--navy:#0D2240;--navy2:#152d52;--gold:#B8860B;--gold2:#d4a017;--gold-light:#f5e6c0;--slate:#4A5568;--body:#2D3748;--light:#F7F8FA;--white:#ffffff;--border:#D1D9E0;--border2:#e8edf2;--teal:#0d6b6b;--teal-light:#e8f5f5;--radius:4px;--radius-lg:12px;--shadow:0 4px 24px rgba(13,34,64,0.08);--shadow-lg:0 12px 48px rgba(13,34,64,0.14);}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'DM Sans',sans-serif;color:var(--body);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;}
+body{font-family:'DM Sans',sans-serif;color:var(--body);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased;-webkit-touch-callout:none;}
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--radius);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer;border:none;transition:all 0.22s;}
-.btn-primary{background:var(--navy);color:var(--white);} .btn-primary:hover{background:var(--navy2);transform:translateY(-1px);}
-.btn-gold{background:var(--gold);color:var(--white);} .btn-gold:hover{background:var(--gold2);transform:translateY(-1px);}
-.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy);} .btn-outline:hover{background:var(--navy);color:var(--white);}
-.btn-outline-white{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.5);} .btn-outline-white:hover{background:rgba(255,255,255,0.1);}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--radius);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer;border:none;transition:all 0.22s;-webkit-touch-callout:none;-webkit-user-select:none;}
+.btn-primary{background:var(--navy);color:var(--white);} .btn-primary:hover{background:var(--navy2);transform:translateY(-1px);} .btn-primary:active{transform:translateY(0);}
+.btn-gold{background:var(--gold);color:var(--white);} .btn-gold:hover{background:var(--gold2);transform:translateY(-1px);} .btn-gold:active{transform:translateY(0);}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy);} .btn-outline:hover{background:var(--navy);color:var(--white);} .btn-outline:active{opacity:0.9;}
+.btn-outline-white{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.5);} .btn-outline-white:hover{background:rgba(255,255,255,0.1);} .btn-outline-white:active{opacity:0.8;}
 .btn-sm{padding:10px 20px;font-size:13px;}
 .section{padding:96px 6%;} .section-sm{padding:64px 6%;}
 .container{max-width:1100px;margin:0 auto;} .container-sm{max-width:760px;margin:0 auto;}
@@ -28,12 +30,12 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
 .gold-rule{width:48px;height:3px;background:var(--gold);margin:20px 0;}
 .page-hero{background:linear-gradient(150deg,var(--navy) 0%,#0a1e35 60%,#0d2e2e 100%);padding:80px 6% 72px;position:relative;overflow:hidden;}
 .page-hero::before{content:'';position:absolute;top:-20%;right:-5%;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(13,107,107,0.18) 0%,transparent 70%);pointer-events:none;}
-.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:20px;}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:20px;flex-wrap:wrap;}
 .breadcrumb a{color:rgba(255,255,255,0.45);text-decoration:none;}
 .breadcrumb span{color:rgba(255,255,255,0.3);}
-.page-hero h1{font-size:clamp(30px,4vw,52px);color:var(--white);line-height:1.15;margin-bottom:16px;letter-spacing:-0.02em;max-width:640px;}
+.page-hero h1{font-size:clamp(30px,4vw,52px);color:var(--white);line-height:1.15;margin-bottom:16px;letter-spacing:-0.02em;max-width:640px;word-wrap:break-word;}
 .page-hero h1 em{color:var(--gold2);font-style:normal;}
-.page-hero p{font-size:17px;color:rgba(255,255,255,0.7);max-width:540px;line-height:1.7;margin-bottom:32px;}
+.page-hero p{font-size:17px;color:rgba(255,255,255,0.7);max-width:540px;line-height:1.7;margin-bottom:32px;word-wrap:break-word;}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
 .special-band{background:var(--teal-light);border-bottom:3px solid var(--teal);padding:28px 6%;}
 .special-band-inner{max-width:1100px;margin:0 auto;display:flex;align-items:flex-start;gap:20px;}
@@ -52,16 +54,17 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
 .fear-item{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);}
 .fear-item:last-child{border-bottom:none;padding-bottom:0;}
 .fear-num{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--gold);flex-shrink:0;line-height:1;margin-top:2px;}
-.fear-text{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.6;}
+.fear-text{font-size:14px;color:rgba(255,255,255,0.75);line-height:1.6;word-wrap:break-word;}
 .fear-text strong{color:white;display:block;margin-bottom:2px;}
 .packages-section{background:var(--light);}
 .packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .pkg-card{background:var(--white);border:1px solid var(--border2);border-radius:var(--radius-lg);overflow:hidden;transition:all 0.25s;display:flex;flex-direction:column;}
 .pkg-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);}
+.pkg-card:active{transform:translateY(-2px);}
 .pkg-card.featured{border-color:var(--gold);position:relative;}
 .pkg-featured-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:white;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 16px;border-radius:0 0 8px 8px;}
 .pkg-header{padding:32px 28px 24px;border-bottom:1px solid var(--border2);}
-.pkg-icon{width:44px;height:44px;border-radius:10px;background:var(--light);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.pkg-icon{width:44px;height:44px;border-radius:10px;background:var(--light);display:flex;align-items:center;justify-content:center;margin-bottom:16px;flex-shrink:0;}
 .pkg-icon svg{width:22px;height:22px;color:var(--navy);}
 .pkg-name{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
 .pkg-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:6px;}
@@ -80,12 +83,14 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
 .practice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 .practice-card{background:var(--white);border:1px solid var(--border2);border-radius:var(--radius-lg);padding:28px;text-align:center;transition:all 0.2s;}
 .practice-card:hover{border-color:var(--navy);box-shadow:var(--shadow);}
+.practice-card:active{box-shadow:var(--shadow);}
 .practice-card h3{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px;}
 .practice-card p{font-size:13px;color:var(--slate);line-height:1.6;}
 .diff-section{background:var(--white);}
 .diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
 .diff-item{padding:28px;border:1px solid var(--border2);border-radius:var(--radius-lg);transition:all 0.2s;}
 .diff-item:hover{border-color:var(--gold);box-shadow:var(--shadow);}
+.diff-item:active{border-color:var(--gold);}
 .diff-num{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--gold);opacity:0.5;line-height:1;margin-bottom:10px;}
 .diff-item h3{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px;}
 .diff-item p{font-size:14px;color:var(--slate);line-height:1.7;}
@@ -95,7 +100,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
 .process-step:last-child{border-bottom:none;}
 .process-num{font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:var(--gold);opacity:0.5;line-height:1;}
 .process-content h3{font-family:'DM Sans',sans-serif;font-size:17px;font-weight:600;color:white;margin-bottom:8px;}
-.process-content p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;}
+.process-content p{font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;word-wrap:break-word;}
 .cta-band{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);padding:80px 6%;text-align:center;}
 .cta-band h2{font-size:clamp(26px,3vw,40px);color:white;margin-bottom:14px;letter-spacing:-0.02em;}
 .cta-band p{font-size:17px;color:rgba(255,255,255,0.7);margin-bottom:36px;}
@@ -112,7 +117,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
 .form-label{display:block;font-size:14px;font-weight:600;color:var(--navy);margin-bottom:8px;}
 .form-input,
 .form-textarea,
-.form-select{width:100%;padding:14px 16px;border:1.5px solid var(--border2);border-radius:var(--radius-lg);font-family:'DM Sans',sans-serif;font-size:14px;color:var(--body);background:var(--white);transition:all 0.2s;min-height:44px;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+.form-select{width:100%;padding:14px 16px;border:1.5px solid var(--border2);border-radius:var(--radius-lg);font-family:'DM Sans',sans-serif;font-size:16px;color:var(--body);background:var(--white);transition:all 0.2s;min-height:44px;-webkit-appearance:none;-moz-appearance:none;appearance:none;word-wrap:break-word;}
 .form-input:focus,
 .form-textarea:focus,
 .form-select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,134,11,0.1);}
@@ -122,7 +127,7 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
 
 .form-submit{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--navy);color:var(--white);border:none;border-radius:var(--radius);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.22s;width:100%!important;justify-content:center;min-height:48px;-webkit-tap-highlight-color:transparent;}
 .form-submit:hover{background:var(--navy2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(13,34,64,0.22);}
-.form-submit:active{transform:translateY(0);}
+.form-submit:active{transform:translateY(0);box-shadow:0 4px 12px rgba(13,34,64,0.12);}
 .form-submit:disabled{opacity:0.6;cursor:not-allowed;}
 
 .form-success{background:rgba(34,197,94,0.1);border:1.5px solid rgba(34,197,94,0.3);border-radius:var(--radius-lg);padding:20px 24px;margin-bottom:24px;display:none;align-items:center;gap:12px;}
@@ -139,12 +144,14 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
 .nav-logo .tac{color:var(--navy);font-weight:900;}
 .nav-logo .fundi{color:var(--gold);font-weight:600;font-style:italic;}
 .nav-links{display:flex;align-items:center;gap:32px;}
-.nav-links a{font-size:14px;font-weight:500;color:var(--slate);text-decoration:none;transition:color 0.2s;}
+.nav-links a{font-size:14px;font-weight:500;color:var(--slate);text-decoration:none;transition:color 0.2s;padding:8px 4px;}
 .nav-links a:hover{color:var(--navy);}
+.nav-links a:active{color:var(--navy2);}
 .nav-links a.active{color:var(--navy);font-weight:600;}
 .nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:10px 22px;border-radius:var(--radius);font-size:13px!important;font-weight:600!important;transition:background 0.2s!important;}
 .nav-cta:hover{background:var(--navy2)!important;}
-.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;z-index:200;flex-shrink:0;}
+.nav-cta:active{opacity:0.9;}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;z-index:200;flex-shrink:0;-webkit-tap-highlight-color:transparent;}
 .nav-toggle span{display:block;width:24px;height:2px;background:var(--navy);border-radius:2px;transition:all 0.3s ease;}
 .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .nav-toggle.open span:nth-child(2){opacity:0;transform:scaleX(0);}
@@ -155,10 +162,12 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
   .nav-links.open{display:flex;}
   .nav-links a{padding:14px 24px;font-size:16px;color:rgba(255,255,255,0.8)!important;border-bottom:1px solid rgba(255,255,255,0.07);font-weight:500;}
   .nav-links a:hover{color:white!important;background:rgba(255,255,255,0.06);}
+  .nav-links a:active{background:rgba(255,255,255,0.1);}
   .nav-links a.active{color:white!important;font-weight:600;}
   .nav-links a:last-child{border-bottom:none;}
   .nav-cta{margin:12px 24px 0;text-align:center;padding:13px 22px!important;border-radius:var(--radius);background:var(--gold)!important;color:#000!important;font-size:15px!important;display:block;}
   .nav-cta:hover{background:var(--gold2)!important;}
+  .nav-cta:active{opacity:0.9;}
 }
 footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;}
 .footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.1);}
@@ -168,10 +177,12 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
 .footer-contact{font-size:13px;color:rgba(255,255,255,0.5);}
 .footer-contact a{color:rgba(255,255,255,0.5);text-decoration:none;}
 .footer-col h4{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:white;margin-bottom:16px;}
-.footer-col a{display:block;font-size:14px;color:rgba(255,255,255,0.55);text-decoration:none;margin-bottom:10px;transition:color 0.2s;}
+.footer-col a{display:block;font-size:14px;color:rgba(255,255,255,0.55);text-decoration:none;margin-bottom:10px;transition:color 0.2s;padding:4px 0;}
 .footer-col a:hover{color:var(--gold2);}
-.footer-bottom{max-width:1100px;margin:24px auto 0;display:flex;justify-content:space-between;align-items:center;font-size:13px;}
+.footer-col a:active{color:var(--gold2);}
+.footer-bottom{max-width:1100px;margin:24px auto 0;display:flex;justify-content:space-between;align-items:center;font-size:13px;flex-wrap:wrap;gap:16px;}
 .footer-bottom a{color:rgba(255,255,255,0.4);text-decoration:none;}
+.footer-bottom a:hover{color:rgba(255,255,255,0.6);}
 
 /* ── TABLET & MEDIUM SCREENS (900px and below) ── */
 @media(max-width:900px){
@@ -310,7 +321,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
   .form-input,.form-textarea,.form-select{padding:14px 12px!important;font-size:16px!important;border-radius:8px!important;}
   .form-textarea{min-height:100px!important;}
   .form-row{grid-template-columns:1fr!important;gap:12px!important;}
-  .form-submit{padding:14px 20px!important;font-size:14px!important;width:100%!important;border-radius:8px!important;}
+  .form-submit{padding:14px 20px!important;font-size:14px!important;width:100%!important;border-radius:8px!important;min-height:50px!important;}
   .form-success{padding:16px 14px!important;font-size:13px!important;gap:10px!important;}
   .form-success svg{width:18px!important;height:18px!important;}
   .form-error{font-size:11px!important;}
@@ -323,7 +334,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
   .nav-cta{margin:8px 18px 12px!important;padding:12px 18px!important;}
   
   /* Buttons */
-  .btn{padding:12px 20px!important;font-size:14px!important;}
+  .btn{padding:12px 20px!important;font-size:14px!important;min-height:44px;}
   .btn-sm{padding:10px 16px!important;font-size:12px!important;}
   
   /* Breadcrumb */
@@ -353,6 +364,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
   .special-icon{width:32px!important;height:32px!important;}
   .special-icon svg{width:16px!important;}
   .practice-grid{grid-template-columns:1fr!important;}
+  .btn{padding:12px 16px!important;}
 }
 
 /* ── EXTRA SMALL SCREENS (380px and below) ── */
@@ -364,10 +376,11 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
   .intro-stat-label{font-size:9px!important;line-height:1.3!important;}
   .process-num{font-size:20px!important;}
   .pkg-price .amount{font-size:22px!important;}
-  .form-input,.form-textarea,.form-select{padding:12px 10px!important;border-radius:6px!important;}
+  .form-input,.form-textarea,.form-select{padding:12px 10px!important;border-radius:6px!important;font-size:16px!important;}
   .intro-band-inner{gap:12px!important;}
   .intro-stat{padding:12px 8px!important;}
   .practice-grid{gap:12px!important;}
+  .hero-btns,.cta-btns{gap:10px!important;}
 }
 </style>
 </head>
@@ -386,27 +399,31 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
     <span></span><span></span><span></span>
   </button>
 </nav>
+
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:rgba(255,255,255,0.65)">For Medical Practices</span></div>
-    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.35);border-radius:100px;padding:6px 14px;margin-bottom:20px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#4ade80;">Registered — Info Regulator No.2026-003992</span></div>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.35);border-radius:100px;padding:6px 14px;margin-bottom:20px;flex-wrap:wrap;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#4ade80;">Registered — Info Regulator No.2026-003992</span></div>
     <h1>Patient Privacy, <em>Professionally Protected</em></h1>
     <p>Patient records are classified as special personal information under POPIA — the highest protection category. TACFundi helps SA medical practices achieve and maintain full compliance.</p>
     <div class="hero-btns"><a href="#assessment" class="btn btn-gold">Book Free Assessment →</a><a href="#packages" class="btn btn-outline-white">View Packages</a></div>
   </div>
 </section>
+
 <div class="special-band">
   <div class="special-band-inner">
     <div class="special-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
     <div class="special-text"><strong>Important: Medical data carries the highest POPIA obligations</strong><span>Health information is listed as "special personal information" under Section 26 of POPIA — meaning stricter requirements, stricter enforcement, and higher penalties apply to medical practices than to most other businesses.</span></div>
   </div>
 </div>
+
 <div class="intro-band"><div class="intro-band-inner">
   <div class="intro-stat"><div class="intro-stat-num">Special</div><div class="intro-stat-label">Health data classified under POPIA's highest protection category</div></div>
   <div class="intro-stat"><div class="intro-stat-num">R10M</div><div class="intro-stat-label">Maximum fine per POPIA violation for health data breaches</div></div>
   <div class="intro-stat"><div class="intro-stat-num">HPCSA</div><div class="intro-stat-label">Professional body requires patient data confidentiality — POPIA formalises it in law</div></div>
   <div class="intro-stat"><div class="intro-stat-num">72hrs</div><div class="intro-stat-label">To notify the Information Regulator after a patient data breach</div></div>
 </div></div>
+
 <section class="section" style="background:var(--white);">
   <div class="container">
     <div class="problem-band-inner">
@@ -429,6 +446,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
     </div>
   </div>
 </section>
+
 <section class="section packages-section" id="packages">
   <div class="container">
     <div style="text-align:center;margin-bottom:48px;"><div class="section-label" style="justify-content:center;">Service Packages</div><h2 style="font-size:clamp(26px,3vw,40px);color:var(--navy);letter-spacing:-0.02em;margin-bottom:12px;">Designed for the way practices work</h2><p style="font-size:16px;color:var(--slate);max-width:520px;margin:0 auto;">Priced for practice budgets. Scoped for practice realities. No IT knowledge required.</p></div>
@@ -439,6 +457,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
     </div>
   </div>
 </section>
+
 <section class="section practice-section">
   <div class="container">
     <div style="text-align:center;margin-bottom:40px;"><div class="section-label" style="justify-content:center;">Who We Serve</div><h2 style="font-size:clamp(26px,3vw,40px);color:var(--navy);letter-spacing:-0.02em;">Built for every type of SA medical practice</h2></div>
@@ -452,6 +471,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
     </div>
   </div>
 </section>
+
 <section class="section diff-section">
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
@@ -465,6 +485,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
     </div>
   </div>
 </section>
+
 <section class="section process-section">
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
@@ -573,13 +594,15 @@ footer{background:var(--navy);color:rgba(255,255,255,0.65);padding:64px 6% 32px;
 <section class="cta-band">
   <div class="container-sm"><h2>Protect your patients' privacy.</h2><p>Book a free 30-minute practice assessment. We'll tell you exactly where you stand — plainly, professionally, with no obligation.</p><div class="cta-btns"><a href="#assessment" class="btn btn-gold">Book Free Assessment →</a><a href="faq-contact.html" class="btn btn-outline-white">Have a Question?</a></div></div>
 </section>
+
 <div style="background:#0a1a30;border-top:1px solid rgba(34,197,94,0.2);padding:20px 6%;">
   <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
     <div style="display:flex;align-items:center;gap:14px;flex:1;min-width:0;"><div style="width:40px;height:40px;border-radius:10px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-    <div><div style="font-size:13px;font-weight:700;color:#4ade80;margin-bottom:2px;">Registered with the Information Regulator of South Africa</div><div style="font-size:11px;color:rgba(255,255,255,0.45);">Reg. No. 2026-003992 · Information Officer: Calvin Ndava · Registered 18 March 2026</div></div></div>
-    <a href="faq-contact.html" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#4ade80;text-decoration:none;border:1px solid rgba(34,197,94,0.3);padding:8px 16px;border-radius:6px;white-space:nowrap;flex-shrink:0;" onmouseover="this.style.background='rgba(34,197,94,0.1)'" onmouseout="this.style.background='transparent'">Verify →</a>
+    <div style="min-width:0;"><div style="font-size:13px;font-weight:700;color:#4ade80;margin-bottom:2px;word-wrap:break-word;">Registered with the Information Regulator of South Africa</div><div style="font-size:11px;color:rgba(255,255,255,0.45);overflow-wrap:break-word;">Reg. No. 2026-003992 · Information Officer: Calvin Ndava · Registered 18 March 2026</div></div></div>
+    <a href="faq-contact.html" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#4ade80;text-decoration:none;border:1px solid rgba(34,197,94,0.3);padding:8px 16px;border-radius:6px;white-space:nowrap;flex-shrink:0;transition:all 0.2s;" onmouseover="this.style.background='rgba(34,197,94,0.1)'" onmouseout="this.style.background='transparent'">Verify →</a>
   </div>
 </div>
+
 <!-- TACFundi AI ChatBot -->
 <script>
 window.TACFundiBot = {
@@ -595,6 +618,7 @@ window.TACFundiBot = {
 };
 </script>
 <script src="widget-live.js"></script>
+
 <footer>
   <div class="footer-grid">
     <div><div class="footer-logo"><span>TAC</span><span class="fundi">Fundi</span></div><p class="footer-tagline">South Africa's cybersecurity specialist for law firms and medical practices.</p><div style="display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.25);border-radius:6px;padding:8px 12px;margin-bottom:14px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span style="font-size:12px;font-weight:600;color:#4ade80;">Registered — Information Regulator SA</span></div><br><div style="font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:14px;">Reg. No. 2026-003992 · Calvin Ndava · 18 March 2026</div><div class="footer-contact">Sandton, Gauteng<br><a href="tel:+27719751571">+27 71 975 1571</a><br><a href="mailto:tac@tacfundi.co.za">tac@tacfundi.co.za</a></div></div>
@@ -604,6 +628,7 @@ window.TACFundiBot = {
   </div>
   <div class="footer-bottom"><span>© 2026 TACFundi. All rights reserved.</span><div style="display:flex;gap:20px;"><a href="https://www.linkedin.com/in/tac-fundi-3275043b8" target="_blank">LinkedIn</a><a href="#">Facebook</a></div></div>
 </footer>
+
 <script>
 function toggleNav(){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(!t||!n)return;var o=n.classList.contains('open');t.classList.toggle('open',!o);n.classList.toggle('open',!o);t.setAttribute('aria-label',o?'Open menu':'Close menu');}
 document.addEventListener('click',function(e){var t=document.getElementById('navToggle'),n=document.getElementById('navLinks');if(t&&n&&!t.contains(e.target)&&!n.contains(e.target)){t.classList.remove('open');n.classList.remove('open');}});
