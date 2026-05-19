@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - TACFundi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Playfair Display (Serif) & Inter (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tacnavy: {
+                            DEFAULT: '#0B1E36', // Exact deep navy background
+                            light: '#132847',   // Slightly lighter card blue
+                            lighter: '#1A3359', // Border and active elements
+                        },
+                        tacgold: {
+                            DEFAULT: '#D29C22', // Golden Amber accent
+                            dark: '#B5851B',
+                            light: '#E5B842'
+                        },
+                        tacgreen: {
+                            DEFAULT: '#22C55E', // Green badge color
+                            bg: 'rgba(34, 197, 94, 0.1)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-serif-elegant {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B1E36;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1A3359;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D29C22;
+        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .print-card {
+                border: 1px solid #e4e4e7 !important;
+                background: white !important;
+                color: black !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-tacnavy text-zinc-300 min-h-screen flex flex-col selection:bg-tacgold selection:text-tacnavy">
+
+    <!-- Top Navigation / Header (Exactly matching the white header UI) -->
+    <header class="bg-white border-b border-zinc-200 sticky top-0 z-50 py-4 px-4 sm:px-6 lg:px-8 no-print shadow-sm">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <!-- Exact TACFundi Logo Styling -->
+                <div class="flex items-baseline">
+                    <span class="text-2xl font-bold tracking-tight text-[#0B1E36]" style="font-family: 'Playfair Display', serif; font-weight: 800;">TAC</span>
+                    <span class="text-2xl font-semibold italic text-[#D29C22]" style="font-family: 'Playfair Display', serif; font-weight: 600;">Fundi</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <a href="https://tacfundi.wasmer.app/" class="text-sm font-semibold text-tacnavy hover:text-tacgold transition-colors flex items-center gap-1">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i> Main Site
+                </a>
+                <button onclick="window.print()" class="bg-tacnavy hover:bg-tacnavy-light text-white px-3.5 py-1.5 rounded text-xs font-bold tracking-wider uppercase transition-all flex items-center gap-1.5 shadow">
+                    <i data-lucide="printer" class="w-3.5 h-3.5"></i> Print
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Registration Badge & Intro Title -->
+        <div class="mb-12 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-semibold tracking-wider uppercase mb-5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                REGISTERED — INFO REGULATOR NO: 2026-003992
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-serif-elegant font-bold text-white leading-tight">
+                Our <span class="text-tacgold italic font-normal">Privacy Commitment</span> to Your Practice
+            </h1>
+            
+            <p class="mt-4 text-base md:text-lg text-zinc-400 max-w-3xl leading-relaxed">
+                As South Africa’s information security specialist protecting sensitive client files, patient records, and secure networks for law firms and medical practices, TACFundi treats your informational sovereignty with absolute priority.
+            </p>
+            
+            <div class="mt-5 flex flex-wrap items-center gap-4 text-xs text-zinc-500 justify-center md:justify-start">
+                <span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-4 h-4 text-tacgold"></i> POPIA & GDPR Compliant</span>
+                <span class="hidden md:inline text-zinc-700">•</span>
+                <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-4 h-4"></i> Last Updated: May 19, 2026</span>
+            </div>
+        </div>
+
+        <!-- Sidebar Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            
+            <!-- Jump-To Sidebar Navigation -->
+            <aside class="lg:col-span-1 space-y-4 no-print">
+                <div class="sticky top-24 bg-tacnavy-light border border-tacnavy-lighter rounded-xl p-5 shadow-xl">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-4 flex items-center gap-2 border-b border-tacnavy-lighter pb-2">
+                        <i data-lucide="navigation" class="w-4 h-4 text-tacgold"></i> Policy Outline
+                    </h3>
+                    <nav class="space-y-1.5" id="nav-container">
+                        <button onclick="scrollToSection('sec-overview')" data-sec="sec-overview" class="w-full text-left px-3 py-2 rounded text-sm font-medium text-zinc-300 hover:bg-tacnavy-lighter hover:text-white transition-all flex items-center justify-between group sidebar-btn">
+                            <span>1. Overview</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 text-tacgold transition-all"></i>
+                        </button>
+                        <button onclick="scrollToSection('sec-role')" data-sec="sec-role" class="w-full text-left px-3 py-2 rounded text-sm font-medium text-zinc-300 hover:bg-tacnavy-lighter hover:text-white transition-all flex items-center justify-between group sidebar-btn">
+                            <span>2. Practice Safeguards</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 text-tacgold transition-all"></i>
+                        </button>
+                        <button onclick="scrollToSection('sec-data')" data-sec="sec-data" class="w-full text-left px-3 py-2 rounded text-sm font-medium text-zinc-300 hover:bg-tacnavy-lighter hover:text-white transition-all flex items-center justify-between group sidebar-btn">
+                            <span>3. What We Process</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 text-tacgold transition-all"></i>
+                        </button>
+                        <button onclick="scrollToSection('sec-popia')" data-sec="sec-popia" class="w-full text-left px-3 py-2 rounded text-sm font-medium text-zinc-300 hover:bg-tacnavy-lighter hover:text-white transition-all flex items-center justify-between group sidebar-btn">
+                            <span>4. POPIA Mandates</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 text-tacgold transition-all"></i>
+                        </button>
+                        <button onclick="scrollToSection('sec-security')" data-sec="sec-security" class="w-full text-left px-3 py-2 rounded text-sm font-medium text-zinc-300 hover:bg-tacnavy-lighter hover:text-white transition-all flex items-center justify-between group sidebar-btn">
+                            <span>5. Secure Encryption</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 text-tacgold transition-all"></i>
+                        </button>
+                        <button onclick="scrollToSection('sec-officer')" data-sec="sec-officer" class="w-full text-left px-3 py-2 rounded text-sm font-medium text-zinc-300 hover:bg-tacnavy-lighter hover:text-white transition-all flex items-center justify-between group sidebar-btn">
+                            <span>6. Information Officer</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 opacity-0 group-hover:opacity-100 text-tacgold transition-all"></i>
+                        </button>
+                    </nav>
+
+                    <div class="mt-6 pt-4 border-t border-tacnavy-lighter">
+                        <button onclick="toggleCookieConsent()" class="w-full bg-tacnavy-lighter hover:bg-tacgold text-zinc-100 hover:text-tacnavy py-2 px-3 rounded text-xs font-bold tracking-wider uppercase transition-all flex items-center justify-center gap-1.5 shadow">
+                            <i data-lucide="settings-2" class="w-3.5 h-3.5"></i> Custom Cookies
+                        </button>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Document Content Panel -->
+            <div class="lg:col-span-3 space-y-8">
+                
+                <!-- Instant Search Filtering Bar -->
+                <div class="relative bg-tacnavy-light border border-tacnavy-lighter rounded-xl p-4 flex flex-col md:flex-row gap-4 items-center justify-between no-print shadow-md">
+                    <div class="relative w-full md:max-w-md">
+                        <i data-lucide="search" class="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-400 w-4 h-4"></i>
+                        <input type="text" id="live-search" onkeyup="filterContents()" placeholder="Search clauses (e.g., 'Encryption', 'POPIA')..." class="w-full bg-tacnavy border border-tacnavy-lighter rounded-lg py-2 pl-10 pr-4 text-sm text-zinc-100 focus:outline-none focus:ring-1 focus:ring-tacgold focus:border-tacgold transition-all">
+                    </div>
+                    <div class="text-xs text-zinc-400">
+                        Have compliance concerns? <a href="mailto:tacfundi@zohomail.com" class="text-tacgold hover:underline font-semibold">Contact Directorate</a>
+                    </div>
+                </div>
+
+                <div id="policy-content-body" class="space-y-6">
+                    
+                    <!-- Section 1 -->
+                    <section id="sec-overview" class="policy-block bg-tacnavy-light border border-tacnavy-lighter rounded-xl p-6 md:p-8 transition-all hover:border-tacgold/30 print-card shadow-md">
+                        <div class="flex items-start gap-4">
+                            <span class="w-8 h-8 rounded bg-tacgold/15 text-tacgold flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm">01</span>
+                            <div>
+                                <h2 class="text-xl font-serif-elegant font-bold text-white tracking-wide">Overview & Application</h2>
+                                <p class="mt-3 text-zinc-300 leading-relaxed text-sm md:text-base">
+                                    TACFundi ("we", "us", or "our") provides technical cybersecurity audits, POPIA compliance frameworks, and digital risk management services for high-stakes business environments, notably legal and medical firms. This policy details how our website, portals, and diagnostic tools treat your data assets.
+                                </p>
+                                <p class="mt-3 text-zinc-300 leading-relaxed text-sm md:text-base">
+                                    By engaging with <a href="https://tacfundi.wasmer.app/" target="_blank" class="text-tacgold hover:underline font-medium">Our website</a>, you acknowledge the configurations, processing schedules, and verification checks detailed within this document.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 2 -->
+                    <section id="sec-role" class="policy-block bg-tacnavy-light border border-tacnavy-lighter rounded-xl p-6 md:p-8 transition-all hover:border-tacgold/30 print-card shadow-md">
+                        <div class="flex items-start gap-4">
+                            <span class="w-8 h-8 rounded bg-tacgold/15 text-tacgold flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm">02</span>
+                            <div>
+                                <h2 class="text-xl font-serif-elegant font-bold text-white tracking-wide">Practice and Client Safeguards</h2>
+                                <p class="mt-3 text-zinc-300 leading-relaxed text-sm md:text-base">
+                                    Firms handling patient records or sensitive legal cases require higher assurance layers. We implement strict operational parameters when assessing and testing client platforms:
+                                </p>
+                                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div class="bg-tacnavy/80 p-4 rounded-lg border border-tacnavy-lighter print-card">
+                                        <h4 class="text-white font-semibold text-sm flex items-center gap-2 mb-2">
+                                            <i data-lucide="scale" class="w-4 h-4 text-tacgold"></i> Legal Professional Privilege
+                                        </h4>
+                                        <p class="text-xs text-zinc-400 leading-relaxed">
+                                            Any corporate metadata generated during digital threat mapping or system evaluations remains fully covered under privilege protocols and is never logged on public infrastructure.
+                                        </p>
+                                    </div>
+                                    <div class="bg-tacnavy/80 p-4 rounded-lg border border-tacnavy-lighter print-card">
+                                        <h4 class="text-white font-semibold text-sm flex items-center gap-2 mb-2">
+                                            <i data-lucide="activity" class="w-4 h-4 text-tacgold"></i> Medical Record Sovereignty
+                                        </h4>
+                                        <p class="text-xs text-zinc-400 leading-relaxed">
+                                            Diagnostic evaluations and technical configurations strictly avoid the aggregation of direct, identifiable healthcare records or patient histories.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 3 -->
+                    <section id="sec-data" class="policy-block bg-tacnavy-light border border-tacnavy-lighter rounded-xl p-6 md:p-8 transition-all hover:border-tacgold/30 print-card shadow-md">
+                        <div class="flex items-start gap-4">
+                            <span class="w-8 h-8 rounded bg-tacgold/15 text-tacgold flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm">03</span>
+                            <div>
+                                <h2 class="text-xl font-serif-elegant font-bold text-white tracking-wide">Information We Process</h2>
+                                <p class="mt-3 text-zinc-300 leading-relaxed text-sm md:text-base">
+                                    To facilitate comprehensive technical reviews and portal experiences, we process:
+                                </p>
+                                <ul class="mt-4 space-y-3">
+                                    <li class="flex items-start gap-2 text-sm text-zinc-300">
+                                        <span class="text-tacgold font-bold mt-0.5">•</span>
+                                        <span><strong class="text-white">Professional Information:</strong> Firm names, CIPC validation states, practice ID numbers, email communication nodes, and phone lines.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-sm text-zinc-300">
+                                        <span class="text-tacgold font-bold mt-0.5">•</span>
+                                        <span><strong class="text-white">Vulnerability Logs:</strong> Assessment reports, network configuration ratings, open diagnostic tests, and encryption scores collected via client consent.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2 text-sm text-zinc-300">
+                                        <span class="text-tacgold font-bold mt-0.5">•</span>
+                                        <span><strong class="text-white">Browsing Data:</strong> Connection metadata, device operating metrics, performance telemetry, and diagnostic cookies.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 4 -->
+                    <section id="sec-popia" class="policy-block bg-tacnavy-light border border-tacnavy-lighter rounded-xl p-6 md:p-8 transition-all hover:border-tacgold/30 print-card shadow-md">
+                        <div class="flex items-start gap-4">
+                            <span class="w-8 h-8 rounded bg-tacgold/15 text-tacgold flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm">04</span>
+                            <div>
+                                <h2 class="text-xl font-serif-elegant font-bold text-white tracking-wide">POPIA Compliance Mandates</h2>
+                                <p class="mt-3 text-zinc-300 leading-relaxed text-sm md:text-base">
+                                    In strict compliance with the Protection of Personal Information Act (POPIA) of South Africa, we uphold the 8 legal Processing Conditions:
+                                </p>
+                                <div class="mt-4 space-y-2.5">
+                                    <div class="flex items-center gap-3 bg-tacnavy/60 p-3 rounded-lg border border-tacnavy-lighter print-card">
+                                        <div class="w-2 h-2 rounded-full bg-tacgold shrink-0"></div>
+                                        <span class="text-xs md:text-sm text-zinc-200"><strong class="text-white">Accountability:</strong> We assume active duty of care for data held in our trust.</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 bg-tacnavy/60 p-3 rounded-lg border border-tacnavy-lighter print-card">
+                                        <div class="w-2 h-2 rounded-full bg-tacgold shrink-0"></div>
+                                        <span class="text-xs md:text-sm text-zinc-200"><strong class="text-white">Specification of Purpose:</strong> Only processing data for cybersecurity diagnosis.</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 bg-tacnavy/60 p-3 rounded-lg border border-tacnavy-lighter print-card">
+                                        <div class="w-2 h-2 rounded-full bg-tacgold shrink-0"></div>
+                                        <span class="text-xs md:text-sm text-zinc-200"><strong class="text-white">Openness:</strong> Complete transparency of automated scripts and diagnostic scanners.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 5 -->
+                    <section id="sec-security" class="policy-block bg-tacnavy-light border border-tacnavy-lighter rounded-xl p-6 md:p-8 transition-all hover:border-tacgold/30 print-card shadow-md">
+                        <div class="flex items-start gap-4">
+                            <span class="w-8 h-8 rounded bg-tacgold/15 text-tacgold flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm">05</span>
+                            <div>
+                                <h2 class="text-xl font-serif-elegant font-bold text-white tracking-wide">Secure Encryption Protocols</h2>
+                                <p class="mt-3 text-zinc-300 leading-relaxed text-sm md:text-base">
+                                    Unencrypted file transfers are primary leak pathways in SA firms. TACFundi mitigates this exposure pattern directly:
+                                </p>
+                                <div class="mt-4 border-l-4 border-tacgold pl-4 py-1 italic text-sm text-zinc-400">
+                                    "All diagnostic files, assessment reports, and connection sessions are run inside secured containerized architecture and guarded by AES-256 standard encryption algorithms during processing and static storage."
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 6 -->
+                    <section id="sec-officer" class="policy-block bg-tacnavy-light border border-tacnavy-lighter rounded-xl p-6 md:p-8 transition-all hover:border-tacgold/30 print-card shadow-md">
+                        <div class="flex items-start gap-4">
+                            <span class="w-8 h-8 rounded bg-tacgold/15 text-tacgold flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm">06</span>
+                            <div>
+                                <h2 class="text-xl font-serif-elegant font-bold text-white tracking-wide">Contact our Information Officer</h2>
+                                <p class="mt-3 text-zinc-300 leading-relaxed text-sm md:text-base">
+                                    Under POPIA, every legal and medical practice is required to maintain a registered Information Officer. For any requests to access, modify, or completely delete your information recorded on our system, contact our representative:
+                                </p>
+                                
+                                <div class="mt-6 bg-tacnavy p-6 rounded-xl border border-tacnavy-lighter flex flex-col md:flex-row items-start md:items-center justify-between gap-4 print-card">
+                                    <div>
+                                        <h4 class="text-white font-bold text-base">TACFundi Compliance Office</h4>
+                                        <p class="text-xs text-zinc-400 mt-1">Pretoria, Gauteng, South Africa</p>
+                                        <p class="text-xs text-tacgold mt-0.5">Registration Ref: NO: 2026-003992</p>
+                                    </div>
+                                    <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                                        <button onclick="toggleForm1Modal()" class="w-full sm:w-auto bg-tacnavy-lighter hover:bg-tacnavy border border-tacnavy-lighter text-zinc-100 hover:text-white px-5 py-2.5 rounded text-sm font-bold tracking-wider uppercase transition-all flex items-center justify-center gap-1.5 shadow-lg">
+                                            <i data-lucide="file-text" class="w-4 h-4"></i> Generate Form
+                                        </button>
+                                        <a href="mailto:tacfundi@zohomail.com" class="w-full sm:w-auto bg-tacgold hover:bg-tacgold-dark text-tacnavy px-5 py-2.5 rounded text-sm font-bold tracking-wider uppercase transition-all flex items-center justify-center gap-1.5 shadow-lg">
+                                            <i data-lucide="mail" class="w-4 h-4"></i> Email Request
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Custom Cookies Consent Preference Modal -->
+    <div id="cookie-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden no-print">
+        <div class="bg-tacnavy-light border border-tacnavy-lighter rounded-2xl max-w-lg w-full p-6 shadow-2xl relative">
+            <button onclick="toggleCookieConsent()" class="absolute top-4 right-4 text-zinc-400 hover:text-white transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            
+            <h3 class="text-lg font-serif-elegant font-bold text-white flex items-center gap-2">
+                <i data-lucide="cookie" class="text-tacgold"></i> Practice Consent Manager
+            </h3>
+            
+            <p class="text-xs text-zinc-400 mt-2 leading-relaxed">
+                We utilize minimal tracking cookies solely to monitor API response latency, protect security parameters, and remember secure session settings.
+            </p>
+            
+            <div class="mt-5 space-y-3.5">
+                <div class="flex items-center justify-between p-3 bg-tacnavy rounded-lg border border-tacnavy-lighter/60">
+                    <div>
+                        <span class="text-sm font-semibold text-white block">Operational Security (Essential)</span>
+                        <span class="text-[10px] text-zinc-400">Maintains security handshakes and threat tokens. Always required.</span>
+                    </div>
+                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider bg-emerald-500/10 px-2 py-0.5 rounded">Active</span>
+                </div>
+                
+                <div class="flex items-center justify-between p-3 bg-tacnavy rounded-lg border border-tacnavy-lighter/60">
+                    <div>
+                        <span class="text-sm font-semibold text-white block">Diagnostic Logs (Performance)</span>
+                        <span class="text-[10px] text-zinc-400">Anonymously reports website load times for quality control.</span>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="diagnostic-cookies" checked class="sr-only peer">
+                        <div class="w-9 h-5 bg-zinc-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-zinc-400 after:border-zinc-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-tacgold"></div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-tacnavy-lighter flex justify-end gap-3">
+                <button onclick="toggleCookieConsent()" class="px-4 py-2 rounded text-xs text-zinc-400 hover:text-white transition-colors">
+                    Discard
+                </button>
+                <button onclick="savePreferences()" class="bg-tacgold hover:bg-tacgold-dark text-tacnavy px-4 py-2 rounded text-xs font-bold uppercase tracking-wider transition-all">
+                    Apply Preferences
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPIA Form 1 Request Modal -->
+    <div id="form1-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden no-print">
+        <div class="bg-tacnavy-light border border-tacnavy-lighter rounded-2xl max-w-2xl w-full p-6 shadow-2xl relative max-h-[90vh] flex flex-col">
+            <button onclick="toggleForm1Modal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white transition-colors">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            
+            <h3 class="text-lg font-serif-elegant font-bold text-white flex items-center gap-2 mb-2">
+                <i data-lucide="file-signature" class="text-tacgold"></i> POPIA Form Generator
+            </h3>
+            
+            <p class="text-xs text-zinc-400 mb-4 leading-relaxed">
+                South African POPIA Form: Request for Objection to the Processing of Personal Information. Fill out the practice metadata below to render a printable reference copy.
+            </p>
+            
+            <div class="flex-grow overflow-y-auto space-y-4 pr-1 text-sm text-zinc-300">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-zinc-400 mb-1">Requester Full Name</label>
+                        <input type="text" id="f1-name" value="Advocate S. Khumalo" class="w-full bg-tacnavy border border-tacnavy-lighter rounded px-3 py-2 text-zinc-100 focus:outline-none focus:ring-1 focus:ring-tacgold">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-zinc-400 mb-1">Identity/Registration Number</label>
+                        <input type="text" id="f1-id" value="7908155123087" class="w-full bg-tacnavy border border-tacnavy-lighter rounded px-3 py-2 text-zinc-100 focus:outline-none focus:ring-1 focus:ring-tacgold">
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-zinc-400 mb-1">Contact Email Address</label>
+                        <input type="email" id="f1-email" value="khumalo@lawchamber.co.za" class="w-full bg-tacnavy border border-tacnavy-lighter rounded px-3 py-2 text-zinc-100 focus:outline-none focus:ring-1 focus:ring-tacgold">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-zinc-400 mb-1">Mobile / Phone Line</label>
+                        <input type="text" id="f1-phone" value="+27 82 555 1234" class="w-full bg-tacnavy border border-tacnavy-lighter rounded px-3 py-2 text-zinc-100 focus:outline-none focus:ring-1 focus:ring-tacgold">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-zinc-400 mb-1">Detailed Reasons for Objection / Request</label>
+                    <textarea id="f1-reasons" rows="3" class="w-full bg-tacnavy border border-tacnavy-lighter rounded px-3 py-2 text-zinc-100 focus:outline-none focus:ring-1 focus:ring-tacgold">Requesting confirmation of complete AES-256 network vulnerability sweep log removal after completion of audit.</textarea>
+                </div>
+
+                <div class="bg-tacnavy p-4 rounded-lg border border-tacnavy-lighter/60">
+                    <h4 class="text-xs font-bold uppercase text-tacgold mb-2">Generated Output Preview</h4>
+                    <pre id="f1-preview" class="text-[10px] font-mono whitespace-pre-wrap text-zinc-400 leading-normal max-h-40 overflow-y-auto bg-black/30 p-3 rounded border border-tacnavy-lighter"></pre>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-tacnavy-lighter flex flex-col sm:flex-row justify-between gap-3 shrink-0">
+                <button onclick="generateFormPreview()" class="bg-tacnavy border border-tacnavy-lighter hover:border-tacgold text-zinc-300 hover:text-white px-4 py-2 rounded text-xs font-bold uppercase tracking-wider transition-all">
+                    Update Preview
+                </button>
+                <div class="flex gap-2 justify-end">
+                    <button onclick="toggleForm1Modal()" class="px-4 py-2 rounded text-xs text-zinc-400 hover:text-white transition-colors">
+                        Cancel
+                    </button>
+                    <button onclick="copyForm1()" class="bg-tacgold hover:bg-tacgold-dark text-tacnavy px-5 py-2 rounded text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5">
+                        <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copy Form Text
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-tacnavy-light border border-tacgold/40 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-2.5 transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+        <span class="text-xs font-medium" id="toast-text">Preferences updated successfully.</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-tacnavy-lighter bg-[#071324] py-8 text-center text-xs text-zinc-500 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+            <div class="flex items-center justify-center space-x-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-tacgold animate-pulse"></span>
+                <span class="text-zinc-400 font-bold uppercase tracking-wider">TACFundi Systems South Africa</span>
+            </div>
+            <p class="leading-relaxed">
+                © 2026 TACFundi. Fully Registered with the Information Regulator of South Africa. All security processes are audited.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Interactive JS Functionality -->
+    <script>
+        // Init Icons on Window Load
+        window.onload = function() {
+            lucide.createIcons();
+            loadSavedCookieConsent();
+            setupScrollSpy();
+            generateFormPreview();
+        };
+
+        // Scroll To Section & Temporarily Highlight Block
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                el.classList.add('border-tacgold/60', 'bg-tacnavy-lighter');
+                setTimeout(() => {
+                    el.classList.remove('border-tacgold/60', 'bg-tacnavy-lighter');
+                }, 2000);
+            }
+        }
+
+        // Active State Scrollspy Navigation Highlight using IntersectionObserver
+        function setupScrollSpy() {
+            const sections = document.querySelectorAll('.policy-block');
+            const navLinks = document.querySelectorAll('.sidebar-btn');
+            
+            const options = {
+                root: null,
+                rootMargin: '-20% 0px -60% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const activeId = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            if (link.getAttribute('data-sec') === activeId) {
+                                link.classList.add('bg-tacnavy-lighter', 'text-white', 'border-l-2', 'border-tacgold');
+                                link.classList.remove('text-zinc-300');
+                                const chevron = link.querySelector('[data-lucide="chevron-right"]');
+                                if (chevron) chevron.style.opacity = '100';
+                            } else {
+                                link.classList.remove('bg-tacnavy-lighter', 'text-white', 'border-l-2', 'border-tacgold');
+                                link.classList.add('text-zinc-300');
+                                const chevron = link.querySelector('[data-lucide="chevron-right"]');
+                                if (chevron) chevron.style.opacity = '0';
+                            }
+                        });
+                    }
+                });
+            }, options);
+
+            sections.forEach(section => observer.observe(section));
+        }
+
+        // Live Search Keyword Filtering
+        function filterContents() {
+            const filter = document.getElementById('live-search').value.toLowerCase();
+            const blocks = document.querySelectorAll('.policy-block');
+            
+            blocks.forEach(block => {
+                const text = block.innerText.toLowerCase();
+                if (text.includes(filter)) {
+                    block.style.display = 'block';
+                    block.style.opacity = '1';
+                } else {
+                    block.style.display = 'none';
+                    block.style.opacity = '0';
+                }
+            });
+        }
+
+        // Modals & Cookie states
+        function toggleCookieConsent() {
+            const modal = document.getElementById('cookie-modal');
+            modal.classList.toggle('hidden');
+        }
+
+        function loadSavedCookieConsent() {
+            const consent = localStorage.getItem('tac_cookie_consent_v1');
+            const checkbox = document.getElementById('diagnostic-cookies');
+            if (consent) {
+                const config = JSON.parse(consent);
+                checkbox.checked = config.diagnostic;
+            }
+        }
+
+        function savePreferences() {
+            const diagnosticState = document.getElementById('diagnostic-cookies').checked;
+            const consentConfig = {
+                security: true, // Operational Security is always true
+                diagnostic: diagnosticState,
+                timestamp: new Date().toISOString()
+            };
+            localStorage.setItem('tac_cookie_consent_v1', JSON.stringify(consentConfig));
+            toggleCookieConsent();
+            showNotice("Consent profile updated successfully!");
+        }
+
+        // Form 1 Objection Document Generator Controls
+        function toggleForm1Modal() {
+            const modal = document.getElementById('form1-modal');
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                generateFormPreview();
+            }
+        }
+
+        function generateFormPreview() {
+            const name = document.getElementById('f1-name').value || "[Name]";
+            const id = document.getElementById('f1-id').value || "[ID/Reg]";
+            const email = document.getElementById('f1-email').value || "[Email]";
+            const phone = document.getElementById('f1-phone').value || "[Phone]";
+            const reasons = document.getElementById('f1-reasons').value || "[Reasons]";
+            const dateStr = new Date().toLocaleDateString('en-ZA', { year: 'numeric', month: 'long', day: 'numeric' });
+
+            const text = `REPUBLIC OF SOUTH AFRICA
+POPIA FORM 1 — OBJECTION TO PROCESSING OF PERSONAL INFORMATION
+(Section 11(3) of Protection of Personal Information Act, 2013)
+
+Date Generated: ${dateStr}
+
+To: The Information Officer
+Company: TACFundi Systems South Africa
+Reg Ref: NO2026-003992
+Location: Pretoria, Gauteng
+
+PART I: DATA SUBJECT DETAILS
+Name: ${name}
+Identity / Reg Number: ${id}
+Email Node: ${email}
+Phone Line: ${phone}
+
+PART II: REASON FOR OBJECTION
+The Data Subject objects to the processing of personal information for the following specific reasons:
+"${reasons}"
+
+PART III: DECLARATION
+The requester declares that the details provided herein are true and accurate under penalty of statutory compliance.`;
+
+            document.getElementById('f1-preview').textContent = text;
+        }
+
+        function copyForm1() {
+            generateFormPreview();
+            const textContent = document.getElementById('f1-preview').textContent;
+            
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = textContent;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+
+            toggleForm1Modal();
+            showNotice("Form 1 copied to clipboard! Ready to paste.");
+        }
+
+        // Show Global Notice Toast
+        function showNotice(text) {
+            const toast = document.getElementById('toast');
+            const msg = document.getElementById('toast-text');
+            msg.innerText = text;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+                toast.classList.remove('translate-y-0', 'opacity-100');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
